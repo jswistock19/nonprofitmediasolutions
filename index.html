@@ -8,6 +8,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+/* ============================================================
+   ART DIRECTION: Nonprofit Broadcast Media — Trustworthy, Bold,
+   Community-Driven. Navy + Gold. Playfair Display + Inter.
+   Sibling brand to On The Marc TV & HWARRA.
+   ============================================================ */
+
 :root, [data-theme="dark"] {
   --color-bg:              #0a0d14;
   --color-surface:         #0f1320;
@@ -60,6 +66,7 @@
   --content-default: 960px;
   --content-wide:    1200px;
 }
+
 [data-theme="light"] {
   --color-bg:              #f8f7f3;
   --color-surface:         #ffffff;
@@ -83,6 +90,7 @@
   --shadow-lg:  0 12px 40px rgba(0,0,0,0.14);
   --shadow-gold: 0 4px 24px rgba(160,120,32,0.15);
 }
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; scroll-padding-top: 80px; }
 body { min-height: 100dvh; line-height: 1.65; font-family: var(--font-body); font-size: var(--text-base); color: var(--color-text); background-color: var(--color-bg); overflow-x: hidden; }
@@ -99,13 +107,31 @@ a { transition: color var(--transition-interactive); }
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--color-bg); }
 ::-webkit-scrollbar-thumb { background: var(--color-divider); border-radius: var(--radius-full); }
+
 .container { max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6); }
 .container--narrow { max-width: var(--content-default); margin-inline: auto; padding-inline: var(--space-6); }
 .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border-width:0; }
-.gold-text { background: linear-gradient(135deg, #d4a93a 0%, #f0c84a 50%, #b8861a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.section-eyebrow { display: inline-block; font-family: var(--font-body); font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-3); }
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10, 13, 20, 0.88); backdrop-filter: blur(16px) saturate(1.4); border-bottom: 1px solid var(--color-border); transition: background var(--transition-interactive); }
-[data-theme="light"] .nav { background: rgba(248, 247, 243, 0.92); }
+
+.gold-text {
+  background: linear-gradient(135deg, #d4a93a 0%, #f0c84a 50%, #b8861a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+/* NAV */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,13,20,0.88); backdrop-filter: blur(16px) saturate(1.4); border-bottom: 1px solid var(--color-border); transition: background var(--transition-interactive); }
+[data-theme="light"] .nav { background: rgba(248,247,243,0.92); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6); }
 .nav-logo { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; color: var(--color-text); }
 .nav-logo svg { flex-shrink: 0; }
@@ -128,12 +154,16 @@ a { transition: color var(--transition-interactive); }
 .mobile-nav.open { display: flex; }
 .mobile-nav a { font-size: var(--text-base); font-weight: 500; color: var(--color-text-muted); text-decoration: none; padding: var(--space-3) 0; border-bottom: 1px solid var(--color-divider); transition: color var(--transition-interactive); }
 .mobile-nav a:hover { color: var(--color-primary); }
+
+/* TICKER */
 .ticker-bar { background: var(--color-primary); color: var(--color-text-inverse); padding: var(--space-2) 0; overflow: hidden; position: relative; z-index: 99; margin-top: 70px; }
 .ticker-inner { display: flex; align-items: center; gap: 0; white-space: nowrap; animation: ticker 30s linear infinite; }
 .ticker-label { background: rgba(0,0,0,0.25); padding: 0 var(--space-4); font-weight: 700; font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; flex-shrink: 0; position: sticky; left: 0; z-index: 2; }
 .ticker-content { font-size: var(--text-xs); font-weight: 500; padding: 0 var(--space-4); letter-spacing: 0.04em; }
 .ticker-dot { margin: 0 var(--space-4); opacity: 0.6; }
 @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* HERO */
 .hero { position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; background: var(--color-bg); }
 .hero-bg { position: absolute; inset: 0; z-index: 0; }
 .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.25; }
@@ -171,12 +201,16 @@ a { transition: color var(--transition-interactive); }
 .schedule-status { font-size: var(--text-xs); font-weight: 600; padding: 2px 8px; border-radius: var(--radius-full); }
 .status-live { background: var(--color-live); color: #fff; }
 .status-next { background: var(--color-surface-dynamic); color: var(--color-text-muted); }
+
+/* PARTNERS */
 .partners-strip { background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding: var(--space-6) 0; }
 .partners-inner { max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6); display: flex; align-items: center; gap: var(--space-10); flex-wrap: wrap; justify-content: center; }
 .partners-label { font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-faint); white-space: nowrap; }
 .partner-logos { display: flex; align-items: center; gap: var(--space-10); flex-wrap: wrap; justify-content: center; }
 .partner-logo { font-family: var(--font-display); font-weight: 700; font-size: var(--text-base); color: var(--color-text-muted); text-decoration: none; letter-spacing: 0.02em; transition: color var(--transition-interactive); opacity: 0.6; }
 .partner-logo:hover { color: var(--color-primary); opacity: 1; }
+
+/* SECTIONS */
 .section { padding-block: clamp(var(--space-12), 7vw, var(--space-24)); }
 .section--alt { background: var(--color-surface); }
 .section--dark { background: var(--color-surface-2); }
@@ -185,11 +219,15 @@ a { transition: color var(--transition-interactive); }
 .section-title { font-size: var(--text-2xl); font-weight: 800; line-height: 1.1; margin-bottom: var(--space-4); }
 .section-subtitle { font-size: var(--text-base); color: var(--color-text-muted); max-width: 56ch; line-height: 1.7; }
 .section-header--center .section-subtitle { margin-inline: auto; }
+
+/* STATS BAND */
 .stats-band { background: linear-gradient(135deg, var(--color-primary) 0%, #b8861a 100%); padding-block: var(--space-12); }
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-8); max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6); }
 .stat-item { text-align: center; }
 .stat-num { font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 900; color: var(--color-text-inverse); line-height: 1; margin-bottom: var(--space-2); }
 .stat-label { font-size: var(--text-sm); color: rgba(10,13,20,0.75); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* MISSION */
 .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center; }
 .mission-image { border-radius: var(--radius-2xl); overflow: hidden; aspect-ratio: 4/3; position: relative; }
 .mission-image img { width: 100%; height: 100%; object-fit: cover; }
@@ -200,6 +238,8 @@ a { transition: color var(--transition-interactive); }
 .mission-bullet { display: flex; align-items: flex-start; gap: var(--space-3); font-size: var(--text-sm); color: var(--color-text-muted); }
 .bullet-icon { width: 22px; height: 22px; border-radius: 50%; background: var(--color-primary-highlight); border: 1px solid var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
 .bullet-icon svg { color: var(--color-primary); }
+
+/* SERVICES */
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
 .service-card { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8); transition: all var(--transition-interactive); position: relative; overflow: hidden; }
 .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover)); transform: scaleX(0); transition: transform var(--transition-interactive); }
@@ -212,6 +252,8 @@ a { transition: color var(--transition-interactive); }
 .service-link:hover { gap: var(--space-3); }
 .service-card--featured { background: linear-gradient(135deg, var(--color-primary-highlight), var(--color-surface-2)); border-color: var(--color-primary); grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center; }
 .service-card--featured::before { transform: scaleX(1); }
+
+/* DISTRIBUTION */
 .distribution-section { position: relative; overflow: hidden; }
 .distribution-bg { position: absolute; inset: 0; }
 .distribution-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.12; }
@@ -224,12 +266,16 @@ a { transition: color var(--transition-interactive); }
 .platform-name { font-size: var(--text-sm); font-weight: 600; color: var(--color-text); margin-top: var(--space-2); }
 .platform-type { font-size: var(--text-xs); color: var(--color-text-muted); }
 .reach-number { font-family: var(--font-display); font-size: var(--text-hero); font-weight: 900; line-height: 1; margin-bottom: var(--space-4); }
+
+/* NONPROFITS */
 .nonprofits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
 .nonprofit-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-6); transition: all var(--transition-interactive); }
 .nonprofit-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--color-divider); }
 .nonprofit-type { font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-2); }
 .nonprofit-title { font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-3); }
 .nonprofit-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.7; }
+
+/* FAMILY NETWORK */
 .family-section { background: var(--color-surface-2); position: relative; overflow: hidden; }
 .family-section::before { content: ''; position: absolute; top: -50%; left: -20%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(212,169,58,0.06) 0%, transparent 70%); pointer-events: none; }
 .family-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-10); }
@@ -242,6 +288,8 @@ a { transition: color var(--transition-interactive); }
 .family-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-5); }
 .family-link { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm); font-weight: 600; color: var(--color-primary); text-decoration: none; }
 .family-link:hover { gap: var(--space-3); }
+
+/* CTA */
 .cta-section { background: linear-gradient(135deg, var(--color-primary-highlight) 0%, var(--color-surface-2) 100%); border-top: 1px solid var(--color-primary); text-align: center; }
 .cta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-12); }
 .cta-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8); text-align: left; transition: all var(--transition-interactive); }
@@ -249,6 +297,8 @@ a { transition: color var(--transition-interactive); }
 .cta-card-label { font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-3); }
 .cta-card-title { font-size: var(--text-xl); font-weight: 800; margin-bottom: var(--space-3); }
 .cta-card-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-6); }
+
+/* FOOTER */
 .footer { background: var(--color-surface); border-top: 1px solid var(--color-border); padding-block: var(--space-16) var(--space-8); }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--space-12); margin-bottom: var(--space-12); }
 .footer-brand-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.7; margin-top: var(--space-4); max-width: 36ch; }
@@ -261,6 +311,8 @@ a { transition: color var(--transition-interactive); }
 .footer-bottom-links { display: flex; gap: var(--space-6); }
 .footer-bottom-links a { font-size: var(--text-xs); color: var(--color-text-faint); text-decoration: none; transition: color var(--transition-interactive); }
 .footer-bottom-links a:hover { color: var(--color-primary); }
+
+/* ANIMATIONS */
 .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
 .fade-up:nth-child(2) { transition-delay: 0.1s; }
@@ -268,6 +320,8 @@ a { transition: color var(--transition-interactive); }
 .fade-up:nth-child(4) { transition-delay: 0.3s; }
 .fade-up:nth-child(5) { transition-delay: 0.4s; }
 .fade-up:nth-child(6) { transition-delay: 0.5s; }
+
+/* RESPONSIVE */
 @media (max-width: 1024px) {
   .hero-content { grid-template-columns: 1fr; gap: var(--space-10); }
   .hero-visual { display: none; }
@@ -297,6 +351,7 @@ a { transition: color var(--transition-interactive); }
 </head>
 <body>
 
+<!-- NAV -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="#" class="nav-logo" aria-label="Non-Profit Media Solutions Home">
@@ -332,6 +387,7 @@ a { transition: color var(--transition-interactive); }
   </div>
 </nav>
 
+<!-- MOBILE NAV -->
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
   <a href="#about">About</a>
   <a href="#services">Services</a>
@@ -341,6 +397,7 @@ a { transition: color var(--transition-interactive); }
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- TICKER -->
 <div class="ticker-bar" aria-label="News ticker">
   <div class="ticker-inner">
     <span class="ticker-label">📡 LIVE</span>
@@ -366,9 +423,13 @@ a { transition: color var(--transition-interactive); }
   </div>
 </div>
 
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg">
-    <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/245c93d9-cbb8-4429-b991-9d6941fa80c8.png" alt="Broadcast studio background" width="1920" height="1080" loading="eager">
+    <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/245c93d9-cbb8-4429-b991-9d6941fa80c8.png"
+         alt="Broadcast studio background"
+         width="1920" height="1080"
+         loading="eager">
   </div>
   <div class="hero-content">
     <div class="hero-text">
@@ -412,6 +473,7 @@ a { transition: color var(--transition-interactive); }
         </div>
       </div>
     </div>
+
     <div class="hero-visual" aria-label="Today's schedule preview">
       <div class="hero-card">
         <div class="hero-card-header">
@@ -468,6 +530,7 @@ a { transition: color var(--transition-interactive); }
   </div>
 </section>
 
+<!-- PARTNERS STRIP -->
 <div class="partners-strip">
   <div class="partners-inner">
     <span class="partners-label">Media Partners</span>
@@ -481,6 +544,7 @@ a { transition: color var(--transition-interactive); }
   </div>
 </div>
 
+<!-- STATS BAND -->
 <div class="stats-band" aria-label="Key statistics">
   <div class="stats-grid">
     <div class="stat-item fade-up">
@@ -502,11 +566,15 @@ a { transition: color var(--transition-interactive); }
   </div>
 </div>
 
+<!-- ABOUT / MISSION -->
 <section class="section" id="about">
   <div class="container">
     <div class="mission-grid">
       <div class="mission-image fade-up">
-        <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/d1c85e81-c826-48b9-807d-1215865e53c6.png" alt="Community members watching nonprofit TV programming at a public venue" width="800" height="600" loading="lazy">
+        <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/d1c85e81-c826-48b9-807d-1215865e53c6.png"
+             alt="Community members watching nonprofit TV programming at a public venue"
+             width="800" height="600"
+             loading="lazy">
         <div class="mission-image-overlay">
           <div style="display:flex;align-items:center;gap:var(--space-3);">
             <span class="now-playing-badge"><span style="width:6px;height:6px;background:#fff;border-radius:50%;display:block;animation:livePulse 1.5s infinite;"></span> Live Now</span>
@@ -522,19 +590,27 @@ a { transition: color var(--transition-interactive); }
         <p>Our network features non-profit messages as the main event, not an afterthought. Unlike traditional advertising, your cause gets real screen time where real people gather — from Denny's restaurants to community centers nationwide.</p>
         <ul class="mission-bullets" role="list">
           <li class="mission-bullet">
-            <div class="bullet-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="bullet-icon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
             <span>Guaranteed high-traffic anchor locations including Denny's restaurants delivering your message 24 hours a day</span>
           </li>
           <li class="mission-bullet">
-            <div class="bullet-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="bullet-icon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
             <span>Multiple screens per location for added visibility and maximum impression counts per visit</span>
           </li>
           <li class="mission-bullet">
-            <div class="bullet-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="bullet-icon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
             <span>Fully automated systems with branding kits and guidance to increase fundraising and community impact</span>
           </li>
           <li class="mission-bullet">
-            <div class="bullet-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="bullet-icon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
             <span>Live event coverage with little to no cost — connecting your cause to your community in real time</span>
           </li>
         </ul>
@@ -543,6 +619,7 @@ a { transition: color var(--transition-interactive); }
   </div>
 </section>
 
+<!-- SERVICES -->
 <section class="section section--alt" id="services">
   <div class="container">
     <div class="section-header">
@@ -558,7 +635,9 @@ a { transition: color var(--transition-interactive); }
           </div>
           <span class="section-eyebrow">Sponsors &amp; Advertisers</span>
           <h3 class="service-title" style="font-size:var(--text-xl);">Reach 350,000+ Weekly Viewers</h3>
-          <p class="service-desc" style="font-size:var(--text-base);">High-traffic anchor locations including Denny's restaurants deliver your message to captive audiences 24 hours a day. Multiple screens per location mean your ad is seen — again and again by every guest.</p>
+          <p class="service-desc" style="font-size:var(--text-base);">
+            High-traffic anchor locations including Denny's restaurants deliver your message to captive audiences 24 hours a day. Multiple screens per location mean your ad is seen — again and again by every guest.
+          </p>
           <div style="display:flex;gap:var(--space-4);flex-wrap:wrap;">
             <a href="#contact" class="btn-hero" style="font-size:var(--text-sm);padding:var(--space-3) var(--space-6);">Start Campaign</a>
             <a href="#contact" class="btn-hero-outline" style="font-size:var(--text-sm);padding:var(--space-3) var(--space-6);">View Media Kit</a>
@@ -588,34 +667,56 @@ a { transition: color var(--transition-interactive); }
           </div>
         </div>
       </div>
+
       <div class="service-card fade-up">
-        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
         <span class="section-eyebrow">Nonprofits</span>
         <h3 class="service-title">Free Airtime for Worthy Causes</h3>
         <p class="service-desc">We're here for you. Fundraisers, live events, PSAs and more — at little to no cost. Your cause deserves the spotlight, not a side banner.</p>
-        <a href="#nonprofits" class="service-link">Apply for Airtime <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#nonprofits" class="service-link">
+          Apply for Airtime
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
       </div>
+
       <div class="service-card fade-up">
-        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2 12h2m16 0h2M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg></div>
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2 12h2m16 0h2M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+        </div>
         <span class="section-eyebrow">Venue Partners</span>
         <h3 class="service-title">Join Our Venue Network</h3>
         <p class="service-desc">Add your location to the Non-Profit TV network. Fully automated systems, branding kits, and meaningful community connections.</p>
-        <a href="#contact" class="service-link">Add Your Venue <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#contact" class="service-link">
+          Add Your Venue
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
       </div>
+
       <div class="service-card fade-up">
-        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
         <span class="section-eyebrow">Community</span>
         <h3 class="service-title">Real Connections to Your Community</h3>
         <p class="service-desc">Non-Profit TV believes supporting the community is vital. We cover live events and provide nonprofits with consistent airtime and presence.</p>
-        <a href="#contact" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#contact" class="service-link">
+          Learn More
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- DISTRIBUTION -->
 <section class="section distribution-section section--dark" id="distribution">
   <div class="distribution-bg">
-    <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/5444abfd-35cd-4e82-b631-a874ca13a653.png" alt="National distribution network map" width="1920" height="1080" loading="lazy">
+    <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/5444abfd-35cd-4e82-b631-a874ca13a653.png"
+         alt="National distribution network map"
+         width="1920" height="1080"
+         loading="lazy">
   </div>
   <div class="distribution-content">
     <div class="container">
@@ -624,7 +725,9 @@ a { transition: color var(--transition-interactive); }
           <span class="section-eyebrow">Distribution</span>
           <h2 class="section-title">A-List Partners.<br>Unmatched Reach.</h2>
           <div class="reach-number gold-text">200M</div>
-          <p style="font-size:var(--text-base);color:var(--color-text-muted);line-height:1.8;max-width:48ch;margin-bottom:var(--space-8);">Non-Profit TV has media partners second to none. Our A-List distribution network reaches 200 million potential viewers through streaming, broadcast, and on-premises display platforms.</p>
+          <p style="font-size:var(--text-base);color:var(--color-text-muted);line-height:1.8;max-width:48ch;margin-bottom:var(--space-8);">
+            Non-Profit TV has media partners second to none. Our A-List distribution network reaches 200 million potential viewers through streaming, broadcast, and on-premises display platforms.
+          </p>
           <div style="display:flex;flex-direction:column;gap:var(--space-4);">
             <div style="display:flex;align-items:center;gap:var(--space-3);">
               <div style="width:40px;height:40px;border-radius:50%;background:var(--color-primary-highlight);border:1px solid var(--color-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
@@ -655,15 +758,40 @@ a { transition: color var(--transition-interactive); }
             </div>
           </div>
         </div>
+
         <div class="fade-up">
           <h3 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);">Available On Every Platform</h3>
           <div class="platform-grid">
-            <div class="platform-item"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg><div class="platform-name">Roku</div><div class="platform-type">Streaming TV</div></div>
-            <div class="platform-item"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg><div class="platform-name">Amazon Fire</div><div class="platform-type">Fire TV</div></div>
-            <div class="platform-item"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg><div class="platform-name">Apple TV</div><div class="platform-type">tvOS</div></div>
-            <div class="platform-item"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><div class="platform-name">Samsung TV</div><div class="platform-type">Smart TV</div></div>
-            <div class="platform-item"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><div class="platform-name">Pluto TV</div><div class="platform-type">Free Streaming</div></div>
-            <div class="platform-item"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><div class="platform-name">Web Browser</div><div class="platform-type">All Devices</div></div>
+            <div class="platform-item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>
+              <div class="platform-name">Roku</div>
+              <div class="platform-type">Streaming TV</div>
+            </div>
+            <div class="platform-item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+              <div class="platform-name">Amazon Fire</div>
+              <div class="platform-type">Fire TV</div>
+            </div>
+            <div class="platform-item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+              <div class="platform-name">Apple TV</div>
+              <div class="platform-type">tvOS</div>
+            </div>
+            <div class="platform-item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <div class="platform-name">Samsung TV</div>
+              <div class="platform-type">Smart TV</div>
+            </div>
+            <div class="platform-item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+              <div class="platform-name">Pluto TV</div>
+              <div class="platform-type">Free Streaming</div>
+            </div>
+            <div class="platform-item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <div class="platform-name">Web Browser</div>
+              <div class="platform-type">All Devices</div>
+            </div>
           </div>
         </div>
       </div>
@@ -671,6 +799,7 @@ a { transition: color var(--transition-interactive); }
   </div>
 </section>
 
+<!-- NONPROFITS -->
 <section class="section" id="nonprofits">
   <div class="container">
     <div class="section-header section-header--center fade-up">
@@ -679,12 +808,36 @@ a { transition: color var(--transition-interactive); }
       <p class="section-subtitle">From PSAs to live fundraiser coverage — Non-Profit Media Solutions gives worthy causes the spotlight they deserve, at little to no cost.</p>
     </div>
     <div class="nonprofits-grid">
-      <div class="nonprofit-card fade-up"><div class="nonprofit-type">📢 Awareness</div><h3 class="nonprofit-title">PSA Campaigns</h3><p class="nonprofit-desc">Reach hundreds of thousands of viewers with your public service announcements, broadcast 24/7 in high-traffic public venues nationwide.</p></div>
-      <div class="nonprofit-card fade-up"><div class="nonprofit-type">🎗 Fundraising</div><h3 class="nonprofit-title">Fundraiser Coverage</h3><p class="nonprofit-desc">Drive donations and event attendance with dedicated broadcast coverage of your fundraising campaigns on our network and partner platforms.</p></div>
-      <div class="nonprofit-card fade-up"><div class="nonprofit-type">📍 Live Events</div><h3 class="nonprofit-title">Live Event Broadcast</h3><p class="nonprofit-desc">We cover your live events whenever possible at little to no cost — bringing your community gatherings to a national broadcast audience.</p></div>
-      <div class="nonprofit-card fade-up"><div class="nonprofit-type">🌐 Community</div><h3 class="nonprofit-title">Community Spotlight</h3><p class="nonprofit-desc">Featured segments dedicated to your organization, mission, and impact — giving a human face to the work your nonprofit does every day.</p></div>
-      <div class="nonprofit-card fade-up"><div class="nonprofit-type">📺 Programming</div><h3 class="nonprofit-title">Dedicated Show Segments</h3><p class="nonprofit-desc">Longer-form programming opportunities to tell your story, showcase your volunteers, and connect deeply with engaged viewers.</p></div>
-      <div class="nonprofit-card fade-up"><div class="nonprofit-type">🤝 Partnership</div><h3 class="nonprofit-title">Media Partnership</h3><p class="nonprofit-desc">Become a long-term media partner with preferred scheduling, cross-platform promotion, and integration with the full On The Marc family.</p></div>
+      <div class="nonprofit-card fade-up">
+        <div class="nonprofit-type">📢 Awareness</div>
+        <h3 class="nonprofit-title">PSA Campaigns</h3>
+        <p class="nonprofit-desc">Reach hundreds of thousands of viewers with your public service announcements, broadcast 24/7 in high-traffic public venues nationwide.</p>
+      </div>
+      <div class="nonprofit-card fade-up">
+        <div class="nonprofit-type">🎗 Fundraising</div>
+        <h3 class="nonprofit-title">Fundraiser Coverage</h3>
+        <p class="nonprofit-desc">Drive donations and event attendance with dedicated broadcast coverage of your fundraising campaigns on our network and partner platforms.</p>
+      </div>
+      <div class="nonprofit-card fade-up">
+        <div class="nonprofit-type">📍 Live Events</div>
+        <h3 class="nonprofit-title">Live Event Broadcast</h3>
+        <p class="nonprofit-desc">We cover your live events whenever possible at little to no cost — bringing your community gatherings to a national broadcast audience.</p>
+      </div>
+      <div class="nonprofit-card fade-up">
+        <div class="nonprofit-type">🌐 Community</div>
+        <h3 class="nonprofit-title">Community Spotlight</h3>
+        <p class="nonprofit-desc">Featured segments dedicated to your organization, mission, and impact — giving a human face to the work your nonprofit does every day.</p>
+      </div>
+      <div class="nonprofit-card fade-up">
+        <div class="nonprofit-type">📺 Programming</div>
+        <h3 class="nonprofit-title">Dedicated Show Segments</h3>
+        <p class="nonprofit-desc">Longer-form programming opportunities to tell your story, showcase your volunteers, and connect deeply with engaged viewers.</p>
+      </div>
+      <div class="nonprofit-card fade-up">
+        <div class="nonprofit-type">🤝 Partnership</div>
+        <h3 class="nonprofit-title">Media Partnership</h3>
+        <p class="nonprofit-desc">Become a long-term media partner with preferred scheduling, cross-platform promotion, and integration with the full On The Marc family.</p>
+      </div>
     </div>
     <div style="text-align:center;margin-top:var(--space-12);">
       <a href="#contact" class="btn-hero">Apply for Airtime Today</a>
@@ -692,6 +845,7 @@ a { transition: color var(--transition-interactive); }
   </div>
 </section>
 
+<!-- FAMILY NETWORK -->
 <section class="section family-section" id="network">
   <div class="container">
     <div class="section-header section-header--center fade-up">
@@ -705,24 +859,34 @@ a { transition: color var(--transition-interactive); }
         <div class="family-logo">📡</div>
         <h3 class="family-name">Non-Profit Media Solutions</h3>
         <p class="family-desc">America's dedicated 24/7 public space TV network — connecting worthy causes to real audiences through Denny's, streaming, and beyond.</p>
-        <a href="#home" class="family-link">Explore Site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#home" class="family-link">
+          Explore Site
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
       </div>
       <div class="family-card fade-up">
         <div class="family-logo">📺</div>
         <h3 class="family-name">On The Marc TV</h3>
         <p class="family-desc">A media empire built on great storytelling. Curated classic cinema, western epics, international programming, and timeless entertainment — free, 24/7.</p>
-        <a href="https://onthemarctv.vercel.app" class="family-link" target="_blank" rel="noopener noreferrer">Visit On The Marc TV <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="https://onthemarctv.vercel.app" class="family-link" target="_blank" rel="noopener noreferrer">
+          Visit On The Marc TV
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
       </div>
       <div class="family-card fade-up">
         <div class="family-logo">🌐</div>
         <h3 class="family-name">HWARRA</h3>
         <p class="family-desc">A humanitarian and community awareness organization working alongside our media network to amplify causes, rights, and community-driven initiatives.</p>
-        <a href="https://www.hwarra.org/" class="family-link" target="_blank" rel="noopener noreferrer">Visit HWARRA <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="https://www.hwarra.org/" class="family-link" target="_blank" rel="noopener noreferrer">
+          Visit HWARRA
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CTA -->
 <section class="section cta-section" id="contact">
   <div class="container--narrow">
     <div class="section-header section-header--center fade-up">
@@ -753,6 +917,7 @@ a { transition: color var(--transition-interactive); }
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
@@ -769,11 +934,19 @@ a { transition: color var(--transition-interactive); }
             <span class="nav-logo-sub">Solutions</span>
           </span>
         </a>
-        <p class="footer-brand-desc">America's dedicated 24/7 public space TV network committed to serving nonprofits and giving worthy causes a big stage. Part of the On The Marc family of media brands.</p>
+        <p class="footer-brand-desc">
+          America's dedicated 24/7 public space TV network committed to serving nonprofits and giving worthy causes a big stage. Part of the On The Marc family of media brands.
+        </p>
         <div style="display:flex;gap:var(--space-3);margin-top:var(--space-6);">
-          <a href="#" style="width:36px;height:36px;border-radius:var(--radius-md);background:var(--color-surface-offset);border:1px solid var(--color-border);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);transition:all var(--transition-interactive);" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a href="#" style="width:36px;height:36px;border-radius:var(--radius-md);background:var(--color-surface-offset);border:1px solid var(--color-border);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);transition:all var(--transition-interactive);" aria-label="Twitter/X" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-          <a href="#" style="width:36px;height:36px;border-radius:var(--radius-md);background:var(--color-surface-offset);border:1px solid var(--color-border);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);transition:all var(--transition-interactive);" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" style="width:36px;height:36px;border-radius:var(--radius-md);background:var(--color-surface-offset);border:1px solid var(--color-border);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);transition:all var(--transition-interactive);" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" style="width:36px;height:36px;border-radius:var(--radius-md);background:var(--color-surface-offset);border:1px solid var(--color-border);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);transition:all var(--transition-interactive);" aria-label="Twitter/X" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" style="width:36px;height:36px;border-radius:var(--radius-md);background:var(--color-surface-offset);border:1px solid var(--color-border);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);transition:all var(--transition-interactive);" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
         </div>
       </div>
       <div>
@@ -836,6 +1009,7 @@ a { transition: color var(--transition-interactive); }
     });
   }
 })();
+
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
 if(hamburger && mobileNav) {
@@ -859,22 +1033,28 @@ if(hamburger && mobileNav) {
     });
   });
 }
+
 const fadeEls = document.querySelectorAll('.fade-up');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if(entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    if(entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 fadeEls.forEach(el => observer.observe(el));
+
 function animateNum(el, target, suffix) {
   const dur = 1800;
   const start = performance.now();
+  const isDecimal = typeof target === 'string' && target.includes('.');
   const num = parseFloat(target);
   function step(ts) {
     const p = Math.min((ts - start) / dur, 1);
     const ease = 1 - Math.pow(1 - p, 3);
     const val = num * ease;
-    el.textContent = (val >= 1000 ? Math.floor(val).toLocaleString() : Math.floor(val)) + suffix;
+    el.textContent = (val >= 1000 ? Math.floor(val).toLocaleString() : val.toFixed(isDecimal ? 1 : 0)) + suffix;
     if(p < 1) requestAnimationFrame(step);
     else el.textContent = (typeof target === 'number' ? target.toLocaleString() : target) + suffix;
   }
@@ -893,7 +1073,12 @@ const statObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.5 });
 document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
-window.addEventListener('resize', () => { if(window.innerWidth > 768 && mobileNav) mobileNav.classList.remove('open'); });
+
+window.addEventListener('resize', () => {
+  if(window.innerWidth > 768 && mobileNav) {
+    mobileNav.classList.remove('open');
+  }
+});
 </script>
 </body>
 </html>
