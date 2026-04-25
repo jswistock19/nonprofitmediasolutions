@@ -1,1 +1,1017 @@
-PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIiBkYXRhLXRoZW1lPSJkYXJrIj4KPGhlYWQ+CjxtZXRhIGNoYXJzZXQ9IlVURi04Ij4KPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAiPgo8dGl0bGU+Tm9uLVByb2ZpdCBNZWRpYSBTb2x1dGlvbnMgJm1kYXNoOyBHaXZpbmcgR29vZCBhIEJpZyBTdGFnZTwvdGl0bGU+CjxsaW5rIHJlbD0icHJlY29ubmVjdCIgaHJlZj0iaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbSI+CjxsaW5rIHJlbD0icHJlY29ubmVjdCIgaHJlZj0iaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbSIgY3Jvc3NvcmlnaW4+CjxsaW5rIGhyZWY9Imh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9UGxheWZhaXIrRGlzcGxheTppdGFsLHdnaHRAMCw0MDA7MCw2MDA7MCw3MDA7MCw5MDA7MSw0MDA7MSw3MDAmZmFtaWx5PUludGVyOndnaHRAMzAwOzQwMDs1MDA7NjAwOzcwMCZkaXNwbGF5PXN3YXAiIHJlbD0ic3R5bGVzaGVldCI+Cgo8IS0tIEZhdmljb24gLS0+CjxsaW5rIHJlbD0iaWNvbiIgaHJlZj0iZGF0YTppbWFnZS9zdmcreG1sLDxzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgMzggMzgnPjxyZWN0IHdpZHRoPSczOCcgaGVpZ2h0PSczOCcgcng9JzgnIGZpbGw9JyVjMmE5M2EnLz48cGF0aCBkPSdNOCAxMmg2bDUgNyA1LTdoNnYxNGgtNHYtOGwtNCA2aC0ybC00LTZ2OEg4VjEyeicgZmlsbD0nJTIzMGEwZDE0Jy8+PC9zdmc+IiB0eXBlPSJpbWFnZS9zdmcreG1sIj4KCjxtZXRhIG5hbWU9ImRlc2NyaXB0aW9uIiBjb250ZW50PSJOb24tUHJvZml0IE1lZGlhIFNvbHV0aW9ucyAtIEFtZXJpY2EncyBkZWRpY2F0ZWQgMjQvNyBwdWJsaWMgc3BhY2UgVFYgbmV0d29yayBjb25uZWN0aW5nIHdvcnRoeSBjYXVzZXMgdG8gcmVhbCBhdWRpZW5jZXMuIj4KPG1ldGEgcHJvcGVydHk9Im9nOnRpdGxlIiBjb250ZW50PSJOb24tUHJvZml0IE1lZGlhIFNvbHV0aW9ucyI+CjxtZXRhIHByb3BlcnR5PSJvZzpkZXNjcmlwdGlvbiIgY29udGVudD0iR2l2aW5nIEdvb2QgYSBCaWcgU3RhZ2UuIDM1MCwwMDArIHdlZWtseSB2aWV3ZXJzLiAyMDAgbWlsbGlvbiByZWFjaC4iPgo8bWV0YSBwcm9wZXJ0eT0ib2c6dHlwZSIgY29udGVudD0id2Vic2l0ZSI+CjwvaGVhZD4KPGJvZHk+CjwhLS0gRnVsbCBzaXRlIGxvYWRlZCBmcm9tIGF0dGFjaGVkIEhUTUwgLS0+CjxzY3JpcHQ+d2luZG93LmxvY2F0aW9uLnJlcGxhY2Uod2luZG93LmxvY2F0aW9uLmhyZWYpOzwvc2NyaXB0Pgo8L2JvZHk+CjwvaHRtbD4=
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non-Profit Media Solutions — Giving Good a Big Stage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root, [data-theme="dark"] {
+  --color-bg:              #0a0d14;
+  --color-surface:         #0f1320;
+  --color-surface-2:       #141828;
+  --color-surface-offset:  #1a1f30;
+  --color-surface-dynamic: #222840;
+  --color-divider:         #2a3050;
+  --color-border:          #303860;
+  --color-text:            #f0eeea;
+  --color-text-muted:      #9ca3b8;
+  --color-text-faint:      #4a5270;
+  --color-text-inverse:    #0a0d14;
+  --color-primary:         #d4a93a;
+  --color-primary-hover:   #e8c055;
+  --color-primary-active:  #b88e20;
+  --color-primary-highlight: #2a2210;
+  --color-live:            #e84040;
+  --color-live-hover:      #ff5555;
+  --color-blue:            #4a7fc1;
+  --color-blue-hover:      #6090d0;
+  --color-blue-highlight:  #1a2840;
+  --color-success:         #4a9e5c;
+  --color-success-highlight: #1a2e1f;
+  --radius-sm:   0.375rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   0.75rem;
+  --radius-xl:   1rem;
+  --radius-2xl:  1.5rem;
+  --radius-full: 9999px;
+  --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-sm:  0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.4);
+  --shadow-lg:  0 12px 40px rgba(0,0,0,0.5);
+  --shadow-gold: 0 4px 24px rgba(212,169,58,0.2);
+  --text-xs:   clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+  --text-xl:   clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+  --text-2xl:  clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+  --text-3xl:  clamp(2.5rem, 1rem + 4vw, 5rem);
+  --text-hero: clamp(3rem, 0.5rem + 7vw, 7rem);
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
+  --space-4: 1rem;    --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem;    --space-10: 2.5rem; --space-12: 3rem;
+  --space-16: 4rem;   --space-20: 5rem;   --space-24: 6rem;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Inter', 'Helvetica Neue', sans-serif;
+  --content-narrow:  640px;
+  --content-default: 960px;
+  --content-wide:    1200px;
+}
+
+[data-theme="light"] {
+  --color-bg:              #f8f7f3;
+  --color-surface:         #ffffff;
+  --color-surface-2:       #f4f2ed;
+  --color-surface-offset:  #ece9e2;
+  --color-surface-dynamic: #e0ddd5;
+  --color-divider:         #dbd8d0;
+  --color-border:          #d0ccc2;
+  --color-text:            #1a1c26;
+  --color-text-muted:      #5a5e6e;
+  --color-text-faint:      #a0a4b0;
+  --color-primary:         #a07820;
+  --color-primary-hover:   #c09030;
+  --color-primary-active:  #7a5c18;
+  --color-primary-highlight: #f5edda;
+  --color-live:            #cc2020;
+  --color-blue:            #2a5fa0;
+  --color-blue-highlight:  #dae4f0;
+  --shadow-sm:  0 1px 2px rgba(0,0,0,0.07);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg:  0 12px 40px rgba(0,0,0,0.14);
+  --shadow-gold: 0 4px 24px rgba(160,120,32,0.15);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { min-height: 100dvh; line-height: 1.65; font-family: var(--font-body); font-size: var(--text-base); color: var(--color-text); background-color: var(--color-bg); overflow-x: hidden; }
+img, video { display: block; max-width: 100%; height: auto; }
+ul[role="list"] { list-style: none; }
+input, button, select { font: inherit; color: inherit; }
+h1,h2,h3,h4,h5 { text-wrap: balance; line-height: 1.1; font-family: var(--font-display); }
+p, li { text-wrap: pretty; }
+button { cursor: pointer; background: none; border: none; }
+a { transition: color var(--transition-interactive); }
+::selection { background: oklch(from var(--color-primary) l c h / 0.25); }
+:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-divider); border-radius: var(--radius-full); }
+
+.container { max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6); }
+.container--narrow { max-width: var(--content-default); margin-inline: auto; padding-inline: var(--space-6); }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border-width:0; }
+
+.gold-text {
+  background: linear-gradient(135deg, #d4a93a 0%, #f0c84a 50%, #b8861a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(10, 13, 20, 0.88);
+  backdrop-filter: blur(16px) saturate(1.4);
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--transition-interactive);
+}
+[data-theme="light"] .nav { background: rgba(248, 247, 243, 0.92); }
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 70px; max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6);
+}
+.nav-logo { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; color: var(--color-text); }
+.nav-logo svg { flex-shrink: 0; }
+.nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+.nav-logo-primary { font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: var(--color-primary); letter-spacing: 0.02em; }
+.nav-logo-sub { font-size: var(--text-xs); color: var(--color-text-muted); letter-spacing: 0.08em; text-transform: uppercase; }
+.nav-links { display: flex; align-items: center; gap: var(--space-8); list-style: none; }
+.nav-links a { font-size: var(--text-sm); font-weight: 500; color: var(--color-text-muted); text-decoration: none; letter-spacing: 0.03em; transition: color var(--transition-interactive); }
+.nav-links a:hover { color: var(--color-primary); }
+.nav-actions { display: flex; align-items: center; gap: var(--space-3); }
+.btn-theme { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-md); color: var(--color-text-muted); background: var(--color-surface-offset); border: 1px solid var(--color-border); transition: all var(--transition-interactive); }
+.btn-theme:hover { color: var(--color-primary); border-color: var(--color-primary); }
+.btn-primary { display: inline-flex; align-items: center; gap: var(--space-2); padding: var(--space-2) var(--space-5); background: var(--color-primary); color: var(--color-text-inverse); font-size: var(--text-sm); font-weight: 600; text-decoration: none; border-radius: var(--radius-md); border: none; transition: background var(--transition-interactive), transform var(--transition-interactive), box-shadow var(--transition-interactive); }
+.btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); box-shadow: var(--shadow-gold); }
+.btn-outline { display: inline-flex; align-items: center; gap: var(--space-2); padding: var(--space-2) var(--space-5); background: transparent; color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; text-decoration: none; border-radius: var(--radius-md); border: 1px solid var(--color-primary); transition: all var(--transition-interactive); }
+.btn-outline:hover { background: var(--color-primary); color: var(--color-text-inverse); transform: translateY(-1px); }
+.hamburger { display: none; flex-direction: column; gap: 5px; padding: var(--space-2); }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--color-text); border-radius: 2px; transition: all var(--transition-interactive); }
+
+.mobile-nav { display: none; position: fixed; top: 70px; left: 0; right: 0; background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: var(--space-4) var(--space-6); z-index: 99; flex-direction: column; gap: var(--space-2); }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { font-size: var(--text-base); font-weight: 500; color: var(--color-text-muted); text-decoration: none; padding: var(--space-3) 0; border-bottom: 1px solid var(--color-divider); transition: color var(--transition-interactive); }
+.mobile-nav a:hover { color: var(--color-primary); }
+
+.ticker-bar { background: var(--color-primary); color: var(--color-text-inverse); padding: var(--space-2) 0; overflow: hidden; position: relative; z-index: 99; margin-top: 70px; }
+.ticker-inner { display: flex; align-items: center; gap: 0; white-space: nowrap; animation: ticker 30s linear infinite; }
+.ticker-label { background: rgba(0,0,0,0.25); padding: 0 var(--space-4); font-weight: 700; font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; flex-shrink: 0; }
+.ticker-content { font-size: var(--text-xs); font-weight: 500; padding: 0 var(--space-4); letter-spacing: 0.04em; }
+.ticker-dot { margin: 0 var(--space-4); opacity: 0.6; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.hero { position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; background: var(--color-bg); }
+.hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.25; }
+.hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,13,20,0.95) 0%, rgba(10,13,20,0.7) 50%, rgba(10,13,20,0.5) 100%); }
+[data-theme="light"] .hero-bg img { opacity: 0.15; }
+[data-theme="light"] .hero-bg::after { background: linear-gradient(135deg, rgba(248,247,243,0.95) 0%, rgba(248,247,243,0.7) 50%, rgba(248,247,243,0.4) 100%); }
+.hero-content { position: relative; z-index: 1; max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6); padding-block: var(--space-20); display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center; }
+.hero-text { max-width: 600px; }
+.hero-live-badge { display: inline-flex; align-items: center; gap: var(--space-2); background: var(--color-live); color: #fff; font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); margin-bottom: var(--space-6); }
+.hero-live-dot { width: 7px; height: 7px; background: #fff; border-radius: 50%; animation: livePulse 1.5s ease-in-out infinite; }
+@keyframes livePulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.7); } }
+.hero-title { font-size: var(--text-hero); font-weight: 900; line-height: 1.0; margin-bottom: var(--space-6); letter-spacing: -0.02em; }
+.hero-subtitle { font-family: var(--font-body); font-size: var(--text-lg); color: var(--color-text-muted); max-width: 52ch; margin-bottom: var(--space-8); line-height: 1.6; font-weight: 300; }
+.hero-ctas { display: flex; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-10); }
+.btn-hero { display: inline-flex; align-items: center; gap: var(--space-2); padding: var(--space-4) var(--space-8); background: var(--color-primary); color: var(--color-text-inverse); font-size: var(--text-base); font-weight: 700; text-decoration: none; border-radius: var(--radius-md); border: none; transition: all var(--transition-interactive); box-shadow: var(--shadow-gold); }
+.btn-hero:hover { background: var(--color-primary-hover); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(212,169,58,0.35); }
+.btn-hero-outline { display: inline-flex; align-items: center; gap: var(--space-2); padding: var(--space-4) var(--space-8); background: transparent; color: var(--color-text); font-size: var(--text-base); font-weight: 600; text-decoration: none; border-radius: var(--radius-md); border: 1px solid var(--color-border); transition: all var(--transition-interactive); }
+.btn-hero-outline:hover { border-color: var(--color-primary); color: var(--color-primary); transform: translateY(-2px); }
+.hero-stats { display: flex; gap: var(--space-8); flex-wrap: wrap; }
+.hero-stat-num { font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: var(--color-primary); line-height: 1; }
+.hero-stat-label { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: var(--space-1); }
+.hero-visual { display: flex; flex-direction: column; gap: var(--space-4); }
+.hero-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-5); box-shadow: var(--shadow-lg); backdrop-filter: blur(8px); }
+.hero-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-4); }
+.hero-card-title { font-family: var(--font-display); font-size: var(--text-base); font-weight: 600; color: var(--color-text); }
+.now-playing-badge { display: inline-flex; align-items: center; gap: var(--space-1); background: var(--color-live); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: var(--radius-full); letter-spacing: 0.08em; text-transform: uppercase; }
+.schedule-list { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+.schedule-item { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); border-radius: var(--radius-md); border: 1px solid transparent; transition: all var(--transition-interactive); }
+.schedule-item.active { background: var(--color-primary-highlight); border-color: var(--color-primary); }
+.schedule-item:not(.active):hover { background: var(--color-surface-offset); }
+.schedule-time { font-size: var(--text-xs); font-weight: 600; color: var(--color-primary); width: 50px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+.schedule-info { flex: 1; min-width: 0; }
+.schedule-name { font-size: var(--text-sm); font-weight: 600; color: var(--color-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.schedule-meta { font-size: var(--text-xs); color: var(--color-text-muted); }
+.schedule-status { font-size: var(--text-xs); font-weight: 600; padding: 2px 8px; border-radius: var(--radius-full); }
+.status-live { background: var(--color-live); color: #fff; }
+.status-next { background: var(--color-surface-dynamic); color: var(--color-text-muted); }
+
+.partners-strip { background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding: var(--space-6) 0; }
+.partners-inner { max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6); display: flex; align-items: center; gap: var(--space-10); flex-wrap: wrap; justify-content: center; }
+.partners-label { font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-faint); white-space: nowrap; }
+.partner-logos { display: flex; align-items: center; gap: var(--space-10); flex-wrap: wrap; justify-content: center; }
+.partner-logo { font-family: var(--font-display); font-weight: 700; font-size: var(--text-base); color: var(--color-text-muted); text-decoration: none; letter-spacing: 0.02em; transition: color var(--transition-interactive); opacity: 0.6; }
+.partner-logo:hover { color: var(--color-primary); opacity: 1; }
+
+.section { padding-block: clamp(var(--space-12), 7vw, var(--space-24)); }
+.section--alt { background: var(--color-surface); }
+.section--dark { background: var(--color-surface-2); }
+.section-header { margin-bottom: var(--space-12); }
+.section-header--center { text-align: center; }
+.section-title { font-size: var(--text-2xl); font-weight: 800; line-height: 1.1; margin-bottom: var(--space-4); }
+.section-subtitle { font-size: var(--text-base); color: var(--color-text-muted); max-width: 56ch; line-height: 1.7; }
+.section-header--center .section-subtitle { margin-inline: auto; }
+
+.stats-band { background: linear-gradient(135deg, var(--color-primary) 0%, #b8861a 100%); padding-block: var(--space-12); }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-8); max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6); }
+.stat-item { text-align: center; }
+.stat-num { font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 900; color: var(--color-text-inverse); line-height: 1; margin-bottom: var(--space-2); }
+.stat-label { font-size: var(--text-sm); color: rgba(10,13,20,0.75); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+
+.mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center; }
+.mission-image { border-radius: var(--radius-2xl); overflow: hidden; aspect-ratio: 4/3; position: relative; }
+.mission-image img { width: 100%; height: 100%; object-fit: cover; }
+.mission-image-overlay { position: absolute; bottom: var(--space-4); left: var(--space-4); right: var(--space-4); background: rgba(10,13,20,0.85); backdrop-filter: blur(8px); border-radius: var(--radius-lg); padding: var(--space-4); border: 1px solid var(--color-border); }
+.mission-text p { color: var(--color-text-muted); font-size: var(--text-base); line-height: 1.8; margin-bottom: var(--space-5); }
+.mission-text p:first-of-type { font-size: var(--text-lg); color: var(--color-text); font-weight: 300; }
+.mission-bullets { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-6); }
+.mission-bullet { display: flex; align-items: flex-start; gap: var(--space-3); font-size: var(--text-sm); color: var(--color-text-muted); }
+.bullet-icon { width: 22px; height: 22px; border-radius: 50%; background: var(--color-primary-highlight); border: 1px solid var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+.bullet-icon svg { color: var(--color-primary); }
+
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.service-card { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8); transition: all var(--transition-interactive); position: relative; overflow: hidden; }
+.service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover)); transform: scaleX(0); transition: transform var(--transition-interactive); }
+.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--color-primary); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-icon { width: 52px; height: 52px; border-radius: var(--radius-lg); background: var(--color-primary-highlight); border: 1px solid var(--color-primary); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-5); color: var(--color-primary); }
+.service-title { font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-3); }
+.service-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.75; margin-bottom: var(--space-5); }
+.service-link { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm); font-weight: 600; color: var(--color-primary); text-decoration: none; transition: gap var(--transition-interactive); }
+.service-link:hover { gap: var(--space-3); }
+.service-card--featured { background: linear-gradient(135deg, var(--color-primary-highlight), var(--color-surface-2)); border-color: var(--color-primary); grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center; }
+.service-card--featured::before { transform: scaleX(1); }
+
+.distribution-section { position: relative; overflow: hidden; }
+.distribution-bg { position: absolute; inset: 0; }
+.distribution-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.12; }
+.distribution-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, var(--color-bg) 0%, transparent 50%, var(--color-bg) 100%); }
+.distribution-content { position: relative; z-index: 1; }
+.distribution-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center; }
+.platform-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+.platform-item { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-4); text-align: center; transition: all var(--transition-interactive); }
+.platform-item:hover { border-color: var(--color-primary); background: var(--color-primary-highlight); transform: translateY(-2px); }
+.platform-name { font-size: var(--text-sm); font-weight: 600; color: var(--color-text); margin-top: var(--space-2); }
+.platform-type { font-size: var(--text-xs); color: var(--color-text-muted); }
+.reach-number { font-family: var(--font-display); font-size: var(--text-hero); font-weight: 900; line-height: 1; margin-bottom: var(--space-4); }
+
+.nonprofits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.nonprofit-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-6); transition: all var(--transition-interactive); }
+.nonprofit-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--color-divider); }
+.nonprofit-type { font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-2); }
+.nonprofit-title { font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-3); }
+.nonprofit-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.7; }
+
+.family-section { background: var(--color-surface-2); position: relative; overflow: hidden; }
+.family-section::before { content: ''; position: absolute; top: -50%; left: -20%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(212,169,58,0.06) 0%, transparent 70%); pointer-events: none; }
+.family-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-10); }
+.family-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8); text-align: center; transition: all var(--transition-interactive); position: relative; }
+.family-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--color-primary); }
+.family-card--active { border-color: var(--color-primary); background: var(--color-primary-highlight); }
+.family-card-badge { position: absolute; top: var(--space-4); right: var(--space-4); background: var(--color-primary); color: var(--color-text-inverse); font-size: var(--text-xs); font-weight: 700; padding: 2px 8px; border-radius: var(--radius-full); }
+.family-logo { width: 64px; height: 64px; border-radius: var(--radius-full); background: var(--color-primary-highlight); border: 2px solid var(--color-primary); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-5); font-size: 1.5rem; }
+.family-name { font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-2); }
+.family-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-5); }
+.family-link { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm); font-weight: 600; color: var(--color-primary); text-decoration: none; }
+.family-link:hover { gap: var(--space-3); }
+
+.cta-section { background: linear-gradient(135deg, var(--color-primary-highlight) 0%, var(--color-surface-2) 100%); border-top: 1px solid var(--color-primary); text-align: center; }
+.cta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-12); }
+.cta-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8); text-align: left; transition: all var(--transition-interactive); }
+.cta-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--color-primary); }
+.cta-card-label { font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-3); }
+.cta-card-title { font-size: var(--text-xl); font-weight: 800; margin-bottom: var(--space-3); }
+.cta-card-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-6); }
+
+.footer { background: var(--color-surface); border-top: 1px solid var(--color-border); padding-block: var(--space-16) var(--space-8); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--space-12); margin-bottom: var(--space-12); }
+.footer-brand-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.7; margin-top: var(--space-4); max-width: 36ch; }
+.footer-col-title { font-size: var(--text-sm); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-faint); margin-bottom: var(--space-5); }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+.footer-links a { font-size: var(--text-sm); color: var(--color-text-muted); text-decoration: none; transition: color var(--transition-interactive); }
+.footer-links a:hover { color: var(--color-primary); }
+.footer-bottom { border-top: 1px solid var(--color-divider); padding-top: var(--space-6); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-4); }
+.footer-copy { font-size: var(--text-xs); color: var(--color-text-faint); }
+.footer-bottom-links { display: flex; gap: var(--space-6); }
+.footer-bottom-links a { font-size: var(--text-xs); color: var(--color-text-faint); text-decoration: none; transition: color var(--transition-interactive); }
+.footer-bottom-links a:hover { color: var(--color-primary); }
+
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.fade-up:nth-child(2) { transition-delay: 0.1s; }
+.fade-up:nth-child(3) { transition-delay: 0.2s; }
+.fade-up:nth-child(4) { transition-delay: 0.3s; }
+.fade-up:nth-child(5) { transition-delay: 0.4s; }
+.fade-up:nth-child(6) { transition-delay: 0.5s; }
+
+@media (max-width: 1024px) {
+  .hero-content { grid-template-columns: 1fr; gap: var(--space-10); }
+  .hero-visual { display: none; }
+  .mission-grid, .distribution-grid { grid-template-columns: 1fr; gap: var(--space-10); }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .service-card--featured { grid-column: span 2; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .family-grid { grid-template-columns: 1fr 1fr; }
+  .nonprofits-grid { grid-template-columns: 1fr 1fr; }
+  .cta-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .nav-links, .nav-actions .btn-primary, .nav-actions .btn-outline { display: none; }
+  .hamburger { display: flex; }
+  .hero-stats { gap: var(--space-6); }
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card--featured { grid-column: span 1; grid-template-columns: 1fr; }
+  .platform-grid { grid-template-columns: repeat(2, 1fr); }
+  .family-grid { grid-template-columns: 1fr; }
+  .nonprofits-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Non-Profit Media Solutions Home">
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+        <rect width="38" height="38" rx="8" fill="#d4a93a"/>
+        <path d="M8 12h6l5 7 5-7h6v14h-4v-8l-4 6h-2l-4-6v8H8V12z" fill="#0a0d14"/>
+        <circle cx="29" cy="10" r="4" fill="#0a0d14"/>
+        <circle cx="29" cy="10" r="2" fill="#d4a93a"/>
+      </svg>
+      <span class="nav-logo-text">
+        <span class="nav-logo-primary">Non-Profit Media</span>
+        <span class="nav-logo-sub">Solutions</span>
+      </span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#distribution">Distribution</a></li>
+      <li><a href="#nonprofits">For Nonprofits</a></li>
+      <li><a href="#network">Our Network</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-theme" data-theme-toggle aria-label="Toggle dark mode">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="#contact" class="btn-outline">Join Network</a>
+      <a href="#sponsors" class="btn-primary">Advertise</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#distribution">Distribution</a>
+  <a href="#nonprofits">For Nonprofits</a>
+  <a href="#network">Our Network</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="ticker-bar" aria-label="News ticker">
+  <div class="ticker-inner">
+    <span class="ticker-label">📡 LIVE</span>
+    <span class="ticker-content">350,000+ Weekly Viewers Nationwide</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-content">2,000,000+ Weekly Impressions</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-content">Media Partners: iDreamCTV · Ezway Networks · On The Marc TV · Inspire World</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-content">200 Million Reach with A-List Support</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-content">Now Accepting Nonprofit Applications — Contact Us Today</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-content">Denny's Restaurant Network — 24/7 Anchor Locations Nationwide</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-content">350,000+ Weekly Viewers Nationwide</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-content">2,000,000+ Weekly Impressions</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-content">Media Partners: iDreamCTV · Ezway Networks · On The Marc TV · Inspire World</span>
+    <span class="ticker-dot">◆</span>
+    <span class="ticker-content">200 Million Reach with A-List Support</span>
+  </div>
+</div>
+
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/245c93d9-cbb8-4429-b991-9d6941fa80c8.png"
+         alt="Broadcast studio background" width="1920" height="1080" loading="eager">
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-live-badge">
+        <span class="hero-live-dot"></span>
+        On Air Now
+      </div>
+      <h1 class="hero-title">
+        <span class="gold-text">Giving Good</span><br>
+        a Big Stage.
+      </h1>
+      <p class="hero-subtitle">
+        Non-Profit Media Solutions is America's dedicated 24/7 public space TV network — connecting worthy causes to real audiences across Denny's restaurants, digital platforms, and beyond.
+      </p>
+      <div class="hero-ctas">
+        <a href="#nonprofits" class="btn-hero">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+          Get Airtime
+        </a>
+        <a href="#sponsors" class="btn-hero-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+          Sponsor / Advertise
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">350K</div>
+          <div class="hero-stat-label">Weekly Viewers</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">2M+</div>
+          <div class="hero-stat-label">Weekly Impressions</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">200M</div>
+          <div class="hero-stat-label">Total Reach</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">24/7</div>
+          <div class="hero-stat-label">Live Broadcast</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-label="Today's schedule preview">
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <span class="hero-card-title">📺 Today's Broadcast</span>
+          <span class="now-playing-badge">
+            <span style="width:6px;height:6px;background:#fff;border-radius:50%;animation:livePulse 1.5s infinite;display:block;"></span>
+            Live
+          </span>
+        </div>
+        <ul class="schedule-list" role="list">
+          <li class="schedule-item active">
+            <span class="schedule-time">11:00 AM</span>
+            <div class="schedule-info">
+              <div class="schedule-name">Community Spotlight</div>
+              <div class="schedule-meta">Non-Profit Showcase · Live</div>
+            </div>
+            <span class="schedule-status status-live">Now</span>
+          </li>
+          <li class="schedule-item">
+            <span class="schedule-time">1:00 PM</span>
+            <div class="schedule-info">
+              <div class="schedule-name">Fundraiser Feature</div>
+              <div class="schedule-meta">Health &amp; Wellness · 45min</div>
+            </div>
+            <span class="schedule-status status-next">Next</span>
+          </li>
+          <li class="schedule-item">
+            <span class="schedule-time">2:30 PM</span>
+            <div class="schedule-info">
+              <div class="schedule-name">India Waves Weekly</div>
+              <div class="schedule-meta">International · On The Marc TV</div>
+            </div>
+            <span class="schedule-status status-next">Soon</span>
+          </li>
+          <li class="schedule-item">
+            <span class="schedule-time">4:00 PM</span>
+            <div class="schedule-info">
+              <div class="schedule-name">PSA Block</div>
+              <div class="schedule-meta">Public Service Announcements</div>
+            </div>
+            <span class="schedule-status status-next">Soon</span>
+          </li>
+          <li class="schedule-item">
+            <span class="schedule-time">6:00 PM</span>
+            <div class="schedule-info">
+              <div class="schedule-name">Evening Community Hour</div>
+              <div class="schedule-meta">Primetime · Live Events</div>
+            </div>
+            <span class="schedule-status status-next">Later</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="partners-strip">
+  <div class="partners-inner">
+    <span class="partners-label">Media Partners</span>
+    <div class="partner-logos">
+      <a href="#" class="partner-logo" target="_blank" rel="noopener noreferrer">iDreamCTV</a>
+      <a href="#" class="partner-logo" target="_blank" rel="noopener noreferrer">Ezway Networks</a>
+      <a href="https://onthemarctv.vercel.app" class="partner-logo" target="_blank" rel="noopener noreferrer">On The Marc TV</a>
+      <a href="#" class="partner-logo" target="_blank" rel="noopener noreferrer">Inspire World</a>
+      <a href="#" class="partner-logo" target="_blank" rel="noopener noreferrer">Denny's Network</a>
+    </div>
+  </div>
+</div>
+
+<div class="stats-band" aria-label="Key statistics">
+  <div class="stats-grid">
+    <div class="stat-item fade-up">
+      <div class="stat-num">350K</div>
+      <div class="stat-label">Weekly Viewers</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">2M+</div>
+      <div class="stat-label">Weekly Impressions</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">200M</div>
+      <div class="stat-label">Total Network Reach</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">Dedicated Broadcast</div>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="mission-image fade-up">
+        <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/d1c85e81-c826-48b9-807d-1215865e53c6.png"
+             alt="Community members watching nonprofit TV programming at a public venue"
+             width="800" height="600" loading="lazy">
+        <div class="mission-image-overlay">
+          <div style="display:flex;align-items:center;gap:var(--space-3);">
+            <span class="now-playing-badge"><span style="width:6px;height:6px;background:#fff;border-radius:50%;display:block;animation:livePulse 1.5s infinite;"></span> Live Now</span>
+            <span style="font-size:var(--text-sm);font-weight:600;">Community Spotlight</span>
+          </div>
+          <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-2);">Reaching real people in real venues, 24 hours a day.</p>
+        </div>
+      </div>
+      <div class="mission-text fade-up">
+        <span class="section-eyebrow">Our Mission</span>
+        <h2 class="section-title">Non-Profits Deserve the <em style="font-style:italic;">Main Stage</em></h2>
+        <p>Non-Profit Media Solutions is a dedicated 24/7 public space TV network committed to serving the nonprofit community. We offer a guaranteed audience that continues to grow year over year — now you can create a unique connection to viewers everywhere.</p>
+        <p>Our network features non-profit messages as the main event, not an afterthought. Unlike traditional advertising, your cause gets real screen time where real people gather — from Denny's restaurants to community centers nationwide.</p>
+        <ul class="mission-bullets" role="list">
+          <li class="mission-bullet">
+            <div class="bullet-icon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span>Guaranteed high-traffic anchor locations including Denny's restaurants delivering your message 24 hours a day</span>
+          </li>
+          <li class="mission-bullet">
+            <div class="bullet-icon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span>Multiple screens per location for added visibility and maximum impression counts per visit</span>
+          </li>
+          <li class="mission-bullet">
+            <div class="bullet-icon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span>Fully automated systems with branding kits and guidance to increase fundraising and community impact</span>
+          </li>
+          <li class="mission-bullet">
+            <div class="bullet-icon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span>Live event coverage with little to no cost — connecting your cause to your community in real time</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">What We Offer</span>
+      <h2 class="section-title">Services Built for Impact</h2>
+      <p class="section-subtitle">Whether you're a nonprofit seeking airtime, a brand wanting to reach engaged audiences, or a venue looking to join our network — we have a program for you.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card service-card--featured fade-up" id="sponsors">
+        <div>
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <span class="section-eyebrow">Sponsors &amp; Advertisers</span>
+          <h3 class="service-title" style="font-size:var(--text-xl);">Reach 350,000+ Weekly Viewers</h3>
+          <p class="service-desc" style="font-size:var(--text-base);">High-traffic anchor locations including Denny's restaurants deliver your message to captive audiences 24 hours a day. Multiple screens per location mean your ad is seen — again and again by every guest.</p>
+          <div style="display:flex;gap:var(--space-4);flex-wrap:wrap;">
+            <a href="#contact" class="btn-hero" style="font-size:var(--text-sm);padding:var(--space-3) var(--space-6);">Start Campaign</a>
+            <a href="#contact" class="btn-hero-outline" style="font-size:var(--text-sm);padding:var(--space-3) var(--space-6);">View Media Kit</a>
+          </div>
+        </div>
+        <div>
+          <div style="background:var(--color-surface-2);border-radius:var(--radius-xl);padding:var(--space-6);border:1px solid var(--color-border);">
+            <h4 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-4);">Campaign Highlights</h4>
+            <div style="display:flex;flex-direction:column;gap:var(--space-4);">
+              <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:var(--space-3);border-bottom:1px solid var(--color-divider);">
+                <span style="font-size:var(--text-sm);color:var(--color-text-muted);">Weekly Viewers</span>
+                <span style="font-family:var(--font-display);font-weight:700;color:var(--color-primary);font-size:var(--text-lg);">350,000+</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:var(--space-3);border-bottom:1px solid var(--color-divider);">
+                <span style="font-size:var(--text-sm);color:var(--color-text-muted);">Weekly Impressions</span>
+                <span style="font-family:var(--font-display);font-weight:700;color:var(--color-primary);font-size:var(--text-lg);">2,000,000+</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:var(--space-3);border-bottom:1px solid var(--color-divider);">
+                <span style="font-size:var(--text-sm);color:var(--color-text-muted);">Total Network Reach</span>
+                <span style="font-family:var(--font-display);font-weight:700;color:var(--color-primary);font-size:var(--text-lg);">200M</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:var(--text-sm);color:var(--color-text-muted);">Broadcast Hours</span>
+                <span style="font-family:var(--font-display);font-weight:700;color:var(--color-primary);font-size:var(--text-lg);">24/7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <span class="section-eyebrow">Nonprofits</span>
+        <h3 class="service-title">Free Airtime for Worthy Causes</h3>
+        <p class="service-desc">We're here for you. Fundraisers, live events, PSAs and more — at little to no cost. Your cause deserves the spotlight, not a side banner.</p>
+        <a href="#nonprofits" class="service-link">Apply for Airtime <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2 12h2m16 0h2M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+        </div>
+        <span class="section-eyebrow">Venue Partners</span>
+        <h3 class="service-title">Join Our Venue Network</h3>
+        <p class="service-desc">Add your location to the Non-Profit TV network. Fully automated systems, branding kits, and meaningful community connections.</p>
+        <a href="#contact" class="service-link">Add Your Venue <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <span class="section-eyebrow">Community</span>
+        <h3 class="service-title">Real Connections to Your Community</h3>
+        <p class="service-desc">Non-Profit TV believes supporting the community is vital. We cover live events and provide nonprofits with consistent airtime and presence.</p>
+        <a href="#contact" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section distribution-section section--dark" id="distribution">
+  <div class="distribution-bg">
+    <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/5444abfd-35cd-4e82-b631-a874ca13a653.png"
+         alt="National distribution network map" width="1920" height="1080" loading="lazy">
+  </div>
+  <div class="distribution-content">
+    <div class="container">
+      <div class="distribution-grid">
+        <div class="fade-up">
+          <span class="section-eyebrow">Distribution</span>
+          <h2 class="section-title">A-List Partners.<br>Unmatched Reach.</h2>
+          <div class="reach-number gold-text">200M</div>
+          <p style="font-size:var(--text-base);color:var(--color-text-muted);line-height:1.8;max-width:48ch;margin-bottom:var(--space-8);">Non-Profit TV has media partners second to none. Our A-List distribution network reaches 200 million potential viewers through streaming, broadcast, and on-premises display platforms.</p>
+          <div style="display:flex;flex-direction:column;gap:var(--space-4);">
+            <div style="display:flex;align-items:center;gap:var(--space-3);">
+              <div style="width:40px;height:40px;border-radius:50%;background:var(--color-primary-highlight);border:1px solid var(--color-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 2 L8 2 L2 7 L22 7 Z"/></svg>
+              </div>
+              <div>
+                <div style="font-weight:600;font-size:var(--text-sm);">iDreamCTV &amp; Ezway Networks</div>
+                <div style="font-size:var(--text-xs);color:var(--color-text-muted);">Connected TV &amp; Streaming Distribution</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:var(--space-3);">
+              <div style="width:40px;height:40px;border-radius:50%;background:var(--color-primary-highlight);border:1px solid var(--color-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+              </div>
+              <div>
+                <div style="font-weight:600;font-size:var(--text-sm);">On The Marc TV</div>
+                <div style="font-size:var(--text-xs);color:var(--color-text-muted);">Classic &amp; Family Entertainment Programming</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:var(--space-3);">
+              <div style="width:40px;height:40px;border-radius:50%;background:var(--color-primary-highlight);border:1px solid var(--color-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div>
+                <div style="font-weight:600;font-size:var(--text-sm);">Inspire World</div>
+                <div style="font-size:var(--text-xs);color:var(--color-text-muted);">Inspirational &amp; Motivational Content</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up">
+          <h3 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-6);">Available On Every Platform</h3>
+          <div class="platform-grid">
+            <div class="platform-item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>
+              <div class="platform-name">Roku</div><div class="platform-type">Streaming TV</div>
+            </div>
+            <div class="platform-item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+              <div class="platform-name">Amazon Fire</div><div class="platform-type">Fire TV</div>
+            </div>
+            <div class="platform-item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+              <div class="platform-name">Apple TV</div><div class="platform-type">tvOS</div>
+            </div>
+            <div class="platform-item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <div class="platform-name">Samsung TV</div><div class="platform-type">Smart TV</div>
+            </div>
+            <div class="platform-item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+              <div class="platform-name">Pluto TV</div><div class="platform-type">Free Streaming</div>
+            </div>
+            <div class="platform-item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <div class="platform-name">Web Browser</div><div class="platform-type">All Devices</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="nonprofits">
+  <div class="container">
+    <div class="section-header section-header--center fade-up">
+      <span class="section-eyebrow">For Non-Profits</span>
+      <h2 class="section-title">We're Here for Your Cause</h2>
+      <p class="section-subtitle">From PSAs to live fundraiser coverage — Non-Profit Media Solutions gives worthy causes the spotlight they deserve, at little to no cost.</p>
+    </div>
+    <div class="nonprofits-grid">
+      <div class="nonprofit-card fade-up">
+        <div class="nonprofit-type">📢 Awareness</div>
+        <h3 class="nonprofit-title">PSA Campaigns</h3>
+        <p class="nonprofit-desc">Reach hundreds of thousands of viewers with your public service announcements, broadcast 24/7 in high-traffic public venues nationwide.</p>
+      </div>
+      <div class="nonprofit-card fade-up">
+        <div class="nonprofit-type">🎗 Fundraising</div>
+        <h3 class="nonprofit-title">Fundraiser Coverage</h3>
+        <p class="nonprofit-desc">Drive donations and event attendance with dedicated broadcast coverage of your fundraising campaigns on our network and partner platforms.</p>
+      </div>
+      <div class="nonprofit-card fade-up">
+        <div class="nonprofit-type">📍 Live Events</div>
+        <h3 class="nonprofit-title">Live Event Broadcast</h3>
+        <p class="nonprofit-desc">We cover your live events whenever possible at little to no cost — bringing your community gatherings to a national broadcast audience.</p>
+      </div>
+      <div class="nonprofit-card fade-up">
+        <div class="nonprofit-type">🌐 Community</div>
+        <h3 class="nonprofit-title">Community Spotlight</h3>
+        <p class="nonprofit-desc">Featured segments dedicated to your organization, mission, and impact — giving a human face to the work your nonprofit does every day.</p>
+      </div>
+      <div class="nonprofit-card fade-up">
+        <div class="nonprofit-type">📺 Programming</div>
+        <h3 class="nonprofit-title">Dedicated Show Segments</h3>
+        <p class="nonprofit-desc">Longer-form programming opportunities to tell your story, showcase your volunteers, and connect deeply with engaged viewers.</p>
+      </div>
+      <div class="nonprofit-card fade-up">
+        <div class="nonprofit-type">🤝 Partnership</div>
+        <h3 class="nonprofit-title">Media Partnership</h3>
+        <p class="nonprofit-desc">Become a long-term media partner with preferred scheduling, cross-platform promotion, and integration with the full On The Marc family.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:var(--space-12);">
+      <a href="#contact" class="btn-hero">Apply for Airtime Today</a>
+    </div>
+  </div>
+</section>
+
+<section class="section family-section" id="network">
+  <div class="container">
+    <div class="section-header section-header--center fade-up">
+      <span class="section-eyebrow">The Family</span>
+      <h2 class="section-title">One Mission. Three Powerful Brands.</h2>
+      <p class="section-subtitle">Non-Profit Media Solutions is part of a family of media organizations united by a commitment to community, storytelling, and impact.</p>
+    </div>
+    <div class="family-grid">
+      <div class="family-card family-card--active fade-up">
+        <span class="family-card-badge">You Are Here</span>
+        <div class="family-logo">📡</div>
+        <h3 class="family-name">Non-Profit Media Solutions</h3>
+        <p class="family-desc">America's dedicated 24/7 public space TV network — connecting worthy causes to real audiences through Denny's, streaming, and beyond.</p>
+        <a href="#home" class="family-link">Explore Site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="family-card fade-up">
+        <div class="family-logo">📺</div>
+        <h3 class="family-name">On The Marc TV</h3>
+        <p class="family-desc">A media empire built on great storytelling. Curated classic cinema, western epics, international programming, and timeless entertainment — free, 24/7.</p>
+        <a href="https://onthemarctv.vercel.app" class="family-link" target="_blank" rel="noopener noreferrer">Visit On The Marc TV <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="family-card fade-up">
+        <div class="family-logo">🌐</div>
+        <h3 class="family-name">HWARRA</h3>
+        <p class="family-desc">A humanitarian and community awareness organization working alongside our media network to amplify causes, rights, and community-driven initiatives.</p>
+        <a href="https://www.hwarra.org/" class="family-link" target="_blank" rel="noopener noreferrer">Visit HWARRA <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-section" id="contact">
+  <div class="container--narrow">
+    <div class="section-header section-header--center fade-up">
+      <span class="section-eyebrow">Get Involved</span>
+      <h2 class="section-title">Ready to Make a Real Difference?</h2>
+      <p class="section-subtitle">Whether you're a nonprofit, advertiser, or venue — there's a place for you in the Non-Profit TV family.</p>
+    </div>
+    <div class="cta-grid">
+      <div class="cta-card fade-up">
+        <div class="cta-card-label">🏥 Non-Profits</div>
+        <h3 class="cta-card-title">Get Free Airtime</h3>
+        <p class="cta-card-desc">Contact us to learn how we can help with your effort. Fundraisers, live events, PSAs and more — at little to no cost to qualified nonprofits.</p>
+        <a href="mailto:info@nonprofitmediasolutions.org" class="btn-primary">Contact Us</a>
+      </div>
+      <div class="cta-card fade-up">
+        <div class="cta-card-label">📣 Advertisers</div>
+        <h3 class="cta-card-title">Reach Your Audience</h3>
+        <p class="cta-card-desc">High-traffic anchor locations, 350,000+ weekly viewers, 2 million impressions. Reach real people in real venues with your brand message.</p>
+        <a href="mailto:advertising@nonprofitmediasolutions.org" class="btn-primary">Request Media Kit</a>
+      </div>
+      <div class="cta-card fade-up">
+        <div class="cta-card-label">📍 Venues</div>
+        <h3 class="cta-card-title">Join Our Network</h3>
+        <p class="cta-card-desc">Add your venue to the Non-Profit TV network. Fully automated systems, branding kits, and the satisfaction of meaningful community connection.</p>
+        <a href="mailto:venues@nonprofitmediasolutions.org" class="btn-primary">Add Your Venue</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="nav-logo" style="margin-bottom:var(--space-4);display:inline-flex;">
+          <svg width="36" height="36" viewBox="0 0 38 38" fill="none" aria-label="Non-Profit Media Solutions logo">
+            <rect width="38" height="38" rx="8" fill="#d4a93a"/>
+            <path d="M8 12h6l5 7 5-7h6v14h-4v-8l-4 6h-2l-4-6v8H8V12z" fill="#0a0d14"/>
+            <circle cx="29" cy="10" r="4" fill="#0a0d14"/>
+            <circle cx="29" cy="10" r="2" fill="#d4a93a"/>
+          </svg>
+          <span class="nav-logo-text" style="margin-left:var(--space-3);">
+            <span class="nav-logo-primary">Non-Profit Media</span>
+            <span class="nav-logo-sub">Solutions</span>
+          </span>
+        </a>
+        <p class="footer-brand-desc">America's dedicated 24/7 public space TV network committed to serving nonprofits and giving worthy causes a big stage. Part of the On The Marc family of media brands.</p>
+        <div style="display:flex;gap:var(--space-3);margin-top:var(--space-6);">
+          <a href="#" style="width:36px;height:36px;border-radius:var(--radius-md);background:var(--color-surface-offset);border:1px solid var(--color-border);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);transition:all var(--transition-interactive);" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" style="width:36px;height:36px;border-radius:var(--radius-md);background:var(--color-surface-offset);border:1px solid var(--color-border);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);transition:all var(--transition-interactive);" aria-label="Twitter/X" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" style="width:36px;height:36px;border-radius:var(--radius-md);background:var(--color-surface-offset);border:1px solid var(--color-border);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);transition:all var(--transition-interactive);" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Services</h4>
+        <ul class="footer-links" role="list">
+          <li><a href="#nonprofits">For Nonprofits</a></li>
+          <li><a href="#sponsors">Advertising</a></li>
+          <li><a href="#contact">Venue Network</a></li>
+          <li><a href="#nonprofits">PSA Campaigns</a></li>
+          <li><a href="#nonprofits">Live Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Distribution</h4>
+        <ul class="footer-links" role="list">
+          <li><a href="#distribution">Roku</a></li>
+          <li><a href="#distribution">Amazon Fire TV</a></li>
+          <li><a href="#distribution">Apple TV</a></li>
+          <li><a href="#distribution">Samsung TV</a></li>
+          <li><a href="#distribution">Pluto TV</a></li>
+          <li><a href="#distribution">Web Browser</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">The Family</h4>
+        <ul class="footer-links" role="list">
+          <li><a href="https://www.nonprofitmediasolutions.org" target="_blank" rel="noopener noreferrer">Non-Profit Media Solutions</a></li>
+          <li><a href="https://onthemarctv.vercel.app" target="_blank" rel="noopener noreferrer">On The Marc TV</a></li>
+          <li><a href="https://www.hwarra.org/" target="_blank" rel="noopener noreferrer">HWARRA</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Non-Profit Media Solutions. All rights reserved. Part of the On The Marc Media Family.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Media Kit</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const t = document.querySelector('[data-theme-toggle]');
+  const r = document.documentElement;
+  let d = 'dark';
+  r.setAttribute('data-theme', d);
+  if(t) {
+    t.addEventListener('click', () => {
+      d = d === 'dark' ? 'light' : 'dark';
+      r.setAttribute('data-theme', d);
+      t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
+      t.innerHTML = d === 'dark'
+        ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>'
+        : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+    });
+  }
+})();
+
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+if(hamburger && mobileNav) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    const spans = hamburger.querySelectorAll('span');
+    if(isOpen) {
+      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    } else {
+      spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    }
+  });
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    });
+  });
+}
+
+const fadeEls = document.querySelectorAll('.fade-up');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+fadeEls.forEach(el => observer.observe(el));
+
+function animateNum(el, target, suffix) {
+  const dur = 1800;
+  const start = performance.now();
+  const num = parseFloat(target);
+  function step(ts) {
+    const p = Math.min((ts - start) / dur, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    const val = num * ease;
+    el.textContent = (val >= 1000 ? Math.floor(val).toLocaleString() : val.toFixed(0)) + suffix;
+    if(p < 1) requestAnimationFrame(step);
+    else el.textContent = (typeof target === 'number' ? target.toLocaleString() : target) + suffix;
+  }
+  requestAnimationFrame(step);
+}
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      const el = entry.target;
+      const text = el.textContent.trim();
+      if(text.includes('350K')) animateNum(el, 350, 'K');
+      else if(text.includes('2M')) animateNum(el, 2, 'M+');
+      else if(text.includes('200M')) animateNum(el, 200, 'M');
+      statObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
+
+window.addEventListener('resize', () => {
+  if(window.innerWidth > 768 && mobileNav) mobileNav.classList.remove('open');
+});
+</script>
+</body>
+</html>
