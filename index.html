@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" style="background:#0a0d14;color:#f0eeea;">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark light">
 <title>Non-Profit Media Solutions — Giving Good a Big Stage</title>
 <meta name="description" content="America's dedicated 24/7 public space TV network connecting worthy causes to real audiences.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+(function(){
+  document.documentElement.setAttribute("data-theme","dark");
+  document.documentElement.style.backgroundColor="#0a0d14";
+  document.documentElement.style.color="#f0eeea";
+})();
+</script>
 <style>
-/* v3 — NAVY + GOLD — dark by default */
-
-html, html[data-theme="dark"], body {
-  background-color: #0a0d14 !important;
-  color: #f0eeea !important;
-}
+/* NAVY + GOLD — dark by default */
 
 :root, [data-theme="dark"] {
   --color-bg:              #0a0d14;
@@ -94,7 +97,7 @@ html, html[data-theme="dark"], body {
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; scroll-padding-top: 80px; background-color: var(--color-bg); }
 body { min-height: 100dvh; line-height: 1.65; font-family: var(--font-body); font-size: var(--text-base); color: var(--color-text); background-color: var(--color-bg); overflow-x: hidden; }
 img, video { display: block; max-width: 100%; height: auto; }
 ul[role="list"] { list-style: none; }
@@ -913,12 +916,16 @@ a { transition: color var(--transition-interactive); }
 </footer>
 
 <script>
-// Theme Toggle — DARK by default, always
+// DARK by default — set immediately before page paint
 (function(){
   var html = document.documentElement;
-  var btn = document.querySelector('[data-theme-toggle]');
   var theme = 'dark';
   html.setAttribute('data-theme', 'dark');
+  html.style.backgroundColor = '#0a0d14';
+  html.style.color = '#f0eeea';
+
+  var btn = document.querySelector('[data-theme-toggle]');
+
   function updateBtn(t) {
     if (!btn) return;
     if (t === 'dark') {
@@ -929,11 +936,15 @@ a { transition: color var(--transition-interactive); }
       btn.setAttribute('aria-label', 'Switch to dark mode');
     }
   }
+
   updateBtn(theme);
+
   if (btn) {
     btn.addEventListener('click', function() {
       theme = theme === 'dark' ? 'light' : 'dark';
       html.setAttribute('data-theme', theme);
+      html.style.backgroundColor = theme === 'dark' ? '#0a0d14' : '#f8f7f3';
+      html.style.color = theme === 'dark' ? '#f0eeea' : '#1a1c26';
       updateBtn(theme);
     });
   }
