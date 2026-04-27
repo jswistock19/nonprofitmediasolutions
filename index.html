@@ -9,10 +9,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   Non-Profit Media Solutions — Navy + Gold Broadcast Theme
-   Playfair Display + Inter
-   ============================================================ */
+/* v3 — NAVY + GOLD — dark by default */
+
+html, html[data-theme="dark"], body {
+  background-color: #0a0d14 !important;
+  color: #f0eeea !important;
+}
 
 :root, [data-theme="dark"] {
   --color-bg:              #0a0d14;
@@ -640,14 +642,14 @@ a { transition: color var(--transition-interactive); }
         <p class="service-desc">Extend your reach beyond physical venues. Your content distributed across our digital partner network including iDreamCTV, Ezway Networks, and 10+ streaming platforms.</p>
         <a href="#distribution" class="service-link">See Platforms <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
-      <div class="service-card service-card--featured fade-up">
+      <div class="service-card service-card--featured fade-up" id="sponsors">
         <div>
           <div class="service-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <h3 class="service-title" style="font-size:var(--text-xl);">Sponsorship &amp; Brand Advertising</h3>
           <p class="service-desc">Align your brand with America's most purpose-driven network. Reach an engaged, community-minded audience of 350,000+ weekly viewers. Full media packages available with custom integration and dedicated placement in nonprofit programming blocks.</p>
-          <a href="#sponsors" class="btn-hero" style="font-size:var(--text-sm);padding:var(--space-3) var(--space-6);">Advertise With Us <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a href="#contact" class="btn-hero" style="font-size:var(--text-sm);padding:var(--space-3) var(--space-6);">Advertise With Us <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
         <div>
           <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-6);">
@@ -826,7 +828,7 @@ a { transition: color var(--transition-interactive); }
           Apply Now
         </a>
       </div>
-      <div class="cta-card fade-up" id="sponsors">
+      <div class="cta-card fade-up">
         <div class="cta-card-label">Sponsors &amp; Brands</div>
         <h3 class="cta-card-title">Advertise With Us</h3>
         <p class="cta-card-desc">Reach 350,000+ weekly viewers who are engaged, community-minded, and ready to support brands that share their values. Media kits available on request.</p>
@@ -911,12 +913,12 @@ a { transition: color var(--transition-interactive); }
 </footer>
 
 <script>
-// Theme Toggle — default DARK
+// Theme Toggle — DARK by default, always
 (function(){
   var html = document.documentElement;
   var btn = document.querySelector('[data-theme-toggle]');
   var theme = 'dark';
-  html.setAttribute('data-theme', theme);
+  html.setAttribute('data-theme', 'dark');
   function updateBtn(t) {
     if (!btn) return;
     if (t === 'dark') {
