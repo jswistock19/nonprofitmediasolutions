@@ -1,15 +1,561 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light">
 <title>Non-Profit Media Solutions — Giving Good a Big Stage</title>
 <meta name="description" content="America's dedicated 24/7 public space TV network connecting worthy causes to real audiences.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<!-- PLACEHOLDER: Full build pushed via API -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue-deep:   #0C3D6E;
+  --blue-mid:    #1565A8;
+  --blue-bright: #2EA3F2;
+  --blue-accent: #0693e3;
+  --blue-dark:   #006ba1;
+  --navy:        #020381;
+  --white:       #ffffff;
+  --off-white:   #f7f8fb;
+  --light-blue-bg: #eaf4fd;
+  --text-dark:   #1d1d22;
+  --text-mid:    #444;
+  --text-muted:  #666;
+  --text-light:  #999;
+  --red-live:    #cf2e2e;
+  --green:       #00d084;
+  --border:      #dde8f5;
+  --font-head:   'Montserrat', sans-serif;
+  --font-body:   'Open Sans', Arial, sans-serif;
+  --trans:       180ms cubic-bezier(0.16,1,0.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:75px}
+body{font-family:var(--font-body);color:var(--text-dark);background:#fff;line-height:1.7}
+img,video,iframe{display:block;max-width:100%;height:auto}
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15;font-weight:700}
+a{color:var(--blue-bright);text-decoration:none;transition:color var(--trans)}
+button{cursor:pointer;border:none;font:inherit}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);transition:box-shadow var(--trans)}
+.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.10)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo svg{width:44px;height:44px;flex-shrink:0}
+.nav-brand{display:flex;flex-direction:column}
+.nav-brand-name{font-family:var(--font-head);font-size:0.9rem;font-weight:800;color:var(--blue-deep);letter-spacing:-.01em;line-height:1.1}
+.nav-brand-tag{font-size:0.65rem;font-weight:500;color:var(--text-muted);letter-spacing:.06em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links a{font-family:var(--font-head);font-size:0.8rem;font-weight:600;color:var(--text-mid);padding:8px 14px;border-radius:6px;transition:background var(--trans),color var(--trans)}
+.nav-links a:hover{background:var(--light-blue-bg);color:var(--blue-bright)}
+.nav-btn{background:var(--blue-bright);color:#fff!important;border-radius:8px!important;padding:9px 20px!important;font-weight:700!important;letter-spacing:-.01em}
+.nav-btn:hover{background:var(--blue-dark)!important;color:#fff!important}
+.nav-live{display:inline-flex;align-items:center;gap:6px;background:var(--red-live);color:#fff;font-family:var(--font-head);font-size:0.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-left:8px}
+.live-dot{width:6px;height:6px;background:#fff;border-radius:50%;animation:blink 1.4s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer}
+.hamburger span{width:24px;height:2px;background:var(--text-dark);border-radius:2px}
+@media(max-width:960px){.nav-links,.nav-btn{display:none}.hamburger{display:flex}}
+
+/* MOBILE MENU */
+.mobile-menu{display:none;position:fixed;inset:0;background:#fff;z-index:600;flex-direction:column;padding:80px 32px 32px;gap:0}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:var(--font-head);font-size:1.4rem;font-weight:700;color:var(--text-dark);padding:18px 0;border-bottom:1px solid var(--border);text-decoration:none}
+.mobile-menu a:last-child{border:none;color:var(--blue-bright)}
+.mobile-close{position:absolute;top:22px;right:22px;font-size:1.8rem;color:var(--text-muted);cursor:pointer;background:none;border:none;line-height:1}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0a2d52 0%,#0d3d6e 30%,#1565a8 70%,#0c71c3 100%);min-height:100vh;display:flex;align-items:center;padding-top:72px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;bottom:-2px;left:0;right:0;height:80px;background:linear-gradient(to bottom,transparent,#fff);pointer-events:none}
+.hero-content{max-width:1280px;margin:0 auto;padding:80px 24px 120px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
+.hero-text{color:#fff}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:999px;padding:6px 16px;font-family:var(--font-head);font-size:0.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-bottom:20px}
+.hero h1{font-family:var(--font-head);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;color:#fff;margin-bottom:20px;line-height:1.05;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:#7ec8f8}
+.hero-desc{font-size:1.05rem;color:rgba(255,255,255,0.85);margin-bottom:32px;max-width:50ch;line-height:1.7}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--blue-mid);font-family:var(--font-head);font-weight:700;font-size:0.88rem;padding:14px 28px;border-radius:8px;text-decoration:none;transition:all var(--trans)}
+.btn-white:hover{background:rgba(255,255,255,0.92);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2);color:var(--blue-deep)}
+.btn-outline-white{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-family:var(--font-head);font-weight:700;font-size:0.88rem;padding:13px 28px;border-radius:8px;border:2px solid rgba(255,255,255,0.5);text-decoration:none;transition:all var(--trans)}
+.btn-outline-white:hover{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.8);color:#fff}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.18)}
+.hero-stat-num{font-family:var(--font-head);font-size:1.7rem;font-weight:900;color:#fff;line-height:1}
+.hero-stat-label{font-size:0.75rem;color:rgba(255,255,255,0.7);margin-top:4px;font-weight:500;letter-spacing:.03em}
+.hero-video-card{background:rgba(255,255,255,0.08);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.18);border-radius:16px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.3)}
+.hero-video-wrap{position:relative;padding-bottom:56.25%;height:0}
+.hero-video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none;border-radius:0}
+.hero-video-caption{padding:16px 20px;display:flex;align-items:center;gap:10px;border-top:1px solid rgba(255,255,255,0.12)}
+.hero-video-caption span{font-family:var(--font-head);font-size:0.78rem;font-weight:600;color:rgba(255,255,255,0.85)}
+@media(max-width:900px){.hero-content{grid-template-columns:1fr;gap:40px;padding:48px 20px 80px}.hero-stats{grid-template-columns:repeat(3,1fr)}}
+
+/* BUTTONS (general) */
+.btn-blue{display:inline-flex;align-items:center;gap:8px;background:var(--blue-bright);color:#fff;font-family:var(--font-head);font-weight:700;font-size:0.88rem;padding:13px 28px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;transition:all var(--trans)}
+.btn-blue:hover{background:var(--blue-dark);transform:translateY(-1px);box-shadow:0 6px 20px rgba(46,163,242,0.4);color:#fff}
+.btn-outline-blue{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--blue-bright);font-family:var(--font-head);font-weight:700;font-size:0.88rem;padding:12px 28px;border-radius:8px;border:2px solid var(--blue-bright);text-decoration:none;transition:all var(--trans)}
+.btn-outline-blue:hover{background:var(--blue-bright);color:#fff}
+
+/* SECTIONS */
+.section{padding:clamp(64px,8vw,112px) 0}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.section-eyebrow{display:inline-block;font-family:var(--font-head);font-size:0.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-bright);margin-bottom:12px}
+.section-title{font-family:var(--font-head);font-size:clamp(1.6rem,4vw,2.5rem);font-weight:800;color:var(--text-dark);margin-bottom:16px;letter-spacing:-.02em}
+.section-subtitle{font-size:1.05rem;color:var(--text-muted);max-width:580px;line-height:1.7}
+.center{text-align:center}.center .section-subtitle{margin:0 auto}
+
+/* WHAT WE DO */
+.what-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.what-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:32px;transition:box-shadow var(--trans),transform var(--trans)}
+.what-card:hover{box-shadow:0 8px 32px rgba(13,61,110,0.1);transform:translateY(-4px)}
+.what-icon{width:52px;height:52px;background:var(--light-blue-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.what-icon svg{width:26px;height:26px;stroke:var(--blue-bright);fill:none;stroke-width:2}
+.what-card h3{font-family:var(--font-head);font-size:1.05rem;font-weight:700;color:var(--text-dark);margin-bottom:10px}
+.what-card p{font-size:0.9rem;color:var(--text-muted);line-height:1.7}
+@media(max-width:768px){.what-grid{grid-template-columns:1fr}}
+
+/* NETWORK SECTION */
+.network-section{background:linear-gradient(135deg,#0a2d52 0%,#0d3d6e 40%,#1565a8 100%);color:#fff;position:relative;overflow:hidden}
+.network-section::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(46,163,242,0.15) 0%,transparent 70%);pointer-events:none}
+.network-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
+.network-text .section-title{color:#fff}
+.network-text .section-subtitle{color:rgba(255,255,255,0.8)}
+.network-text .section-eyebrow{color:rgba(255,255,255,0.65)}
+.network-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.net-stat{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:24px}
+.net-stat-num{font-family:var(--font-head);font-size:1.8rem;font-weight:900;color:#fff;line-height:1}
+.net-stat-label{font-size:0.8rem;color:rgba(255,255,255,0.7);margin-top:6px;font-weight:500}
+.network-partners{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.partner-card{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:20px 24px;display:flex;align-items:center;gap:14px}
+.partner-card-icon{width:40px;height:40px;background:rgba(255,255,255,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.partner-card-icon svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2}
+.partner-card-name{font-family:var(--font-head);font-size:0.82rem;font-weight:700;color:#fff}
+.partner-card-desc{font-size:0.72rem;color:rgba(255,255,255,0.6);margin-top:2px}
+@media(max-width:900px){.network-inner{grid-template-columns:1fr;gap:40px}.network-partners{grid-template-columns:repeat(2,1fr)}}
+
+/* PSA SECTION */
+.psa-section{background:var(--off-white)}
+.psa-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.psa-video-wrap{border-radius:14px;overflow:hidden;box-shadow:0 16px 48px rgba(13,61,110,0.15)}
+.psa-video-inner{position:relative;padding-bottom:56.25%;height:0}
+.psa-video-inner iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+.psa-features{display:flex;flex-direction:column;gap:20px;margin-top:32px}
+.psa-feature{display:flex;gap:16px;align-items:flex-start}
+.psa-feature-icon{width:42px;height:42px;background:var(--light-blue-bg);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.psa-feature-icon svg{width:20px;height:20px;stroke:var(--blue-bright);fill:none;stroke-width:2}
+.psa-feature-title{font-family:var(--font-head);font-size:0.9rem;font-weight:700;color:var(--text-dark);margin-bottom:4px}
+.psa-feature-desc{font-size:0.85rem;color:var(--text-muted);line-height:1.6}
+@media(max-width:768px){.psa-grid{grid-template-columns:1fr;gap:32px}}
+
+/* ADVERTISERS */
+.ad-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.ad-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:32px;text-align:center;transition:all var(--trans)}
+.ad-card:hover{border-color:var(--blue-bright);box-shadow:0 8px 32px rgba(46,163,242,0.12);transform:translateY(-4px)}
+.ad-card-num{font-family:var(--font-head);font-size:2rem;font-weight:900;color:var(--blue-bright);margin-bottom:8px}
+.ad-card-label{font-family:var(--font-head);font-size:0.85rem;font-weight:700;color:var(--text-dark);margin-bottom:8px}
+.ad-card-desc{font-size:0.85rem;color:var(--text-muted);line-height:1.6}
+@media(max-width:768px){.ad-cards{grid-template-columns:1fr}}
+
+/* JOIN NETWORK */
+.join-section{background:linear-gradient(135deg,#0a2d52,#1565a8)}
+.join-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.join-text .section-title{color:#fff}
+.join-text .section-subtitle{color:rgba(255,255,255,0.8)}
+.join-text .section-eyebrow{color:rgba(255,255,255,0.65)}
+.join-checklist{display:flex;flex-direction:column;gap:14px;margin-top:32px}
+.join-check{display:flex;gap:12px;align-items:flex-start}
+.check-icon{width:22px;height:22px;background:rgba(255,255,255,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.check-icon svg{width:12px;height:12px;stroke:#fff;fill:none;stroke-width:3}
+.join-check-text{font-size:0.9rem;color:rgba(255,255,255,0.85);line-height:1.5}
+.join-form-card{background:rgba(255,255,255,0.95);border-radius:16px;padding:36px;box-shadow:0 16px 48px rgba(0,0,0,0.2)}
+.join-form-card h3{font-family:var(--font-head);font-size:1.2rem;font-weight:800;color:var(--text-dark);margin-bottom:6px}
+.join-form-card p{font-size:0.85rem;color:var(--text-muted);margin-bottom:24px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-family:var(--font-head);font-size:0.75rem;font-weight:700;color:var(--text-mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:var(--font-body);font-size:0.9rem;color:var(--text-dark);background:#fff;transition:border-color var(--trans),box-shadow var(--trans);outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--blue-bright);box-shadow:0 0 0 3px rgba(46,163,242,0.12)}
+.form-group textarea{resize:vertical;min-height:80px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:900px){.join-inner{grid-template-columns:1fr;gap:40px}}
+@media(max-width:768px){.form-row{grid-template-columns:1fr}}
+
+/* CONTACT */
+.contact-section{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.contact-block{display:flex;gap:16px;align-items:flex-start}
+.contact-block-icon{width:44px;height:44px;background:var(--light-blue-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-block-icon svg{width:20px;height:20px;stroke:var(--blue-bright);fill:none;stroke-width:2}
+.contact-block-label{font-family:var(--font-head);font-size:0.75rem;font-weight:700;color:var(--text-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.contact-block-val{font-size:0.95rem;font-weight:600;color:var(--text-dark)}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:40px}}
+
+/* FOOTER */
+.footer{background:var(--text-dark);color:rgba(255,255,255,0.65)}
+.footer-inner{max-width:1280px;margin:0 auto;padding:56px 24px 32px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}
+.footer-brand-name{font-family:var(--font-head);font-size:0.95rem;font-weight:800;color:#fff;margin-bottom:8px}
+.footer-tagline{font-size:0.85rem;line-height:1.7;margin-bottom:20px}
+.footer-social{display:flex;gap:12px}
+.footer-social a{width:36px;height:36px;background:rgba(255,255,255,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background var(--trans)}
+.footer-social a:hover{background:var(--blue-bright)}
+.footer-social svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2}
+.footer-col-title{font-family:var(--font-head);font-size:0.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul li a{font-size:0.85rem;color:rgba(255,255,255,0.6);text-decoration:none;transition:color var(--trans)}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{max-width:1280px;margin:0 auto;padding:20px 24px;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:0.78rem;color:rgba(255,255,255,0.35)}
+@media(max-width:768px){.footer-inner{grid-template-columns:1fr 1fr;gap:32px}.footer-inner>div:first-child{grid-column:span 2}}
+
+/* FADE-UP */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+</style>
 </head>
-<body>Rebuilding...</body>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="NPMS Logo">
+        <rect width="44" height="44" rx="8" fill="#0C3D6E"/>
+        <rect x="8" y="12" width="28" height="20" rx="3" stroke="#2EA3F2" stroke-width="2.5" fill="none"/>
+        <circle cx="22" cy="22" r="5" fill="#2EA3F2"/>
+        <circle cx="22" cy="22" r="2.5" fill="#0C3D6E"/>
+        <path d="M8 19h4M32 19h4M8 25h4M32 25h4" stroke="#2EA3F2" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="nav-brand">
+        <span class="nav-brand-name">Non-Profit Media Solutions</span>
+        <span class="nav-brand-tag">Giving Good a Big Stage</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#psa">PSA/Non-Profits</a></li>
+      <li><a href="#advertisers">Advertisers</a></li>
+      <li><a href="#join">Join Network</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-btn">Get Started</a></li>
+    </ul>
+    <span class="nav-live"><span class="live-dot"></span>LIVE</span>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">&#x2715;</button>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#psa" onclick="toggleMenu()">PSA / Non-Profits</a>
+  <a href="#advertisers" onclick="toggleMenu()">Advertisers</a>
+  <a href="#join" onclick="toggleMenu()">Join Network</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="#contact" onclick="toggleMenu()">Get Started &rarr;</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-text fade-up">
+      <div class="hero-eyebrow">
+        <span class="live-dot" style="background:rgba(255,255,255,0.8)"></span>
+        America's 24/7 Non-Profit TV Network
+      </div>
+      <h1>Giving <em>Good</em> a<br>Big Stage</h1>
+      <p class="hero-desc">Non-Profit TV is a dedicated 24/7 public space television network committed to serving non-profits and connecting worthy causes to real audiences &mdash; every single day.</p>
+      <div class="hero-btns">
+        <a href="#psa" class="btn-white">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Learn More
+        </a>
+        <a href="#contact" class="btn-outline-white">Get Started</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">350K+</div>
+          <div class="hero-stat-label">Weekly Viewers</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">2M+</div>
+          <div class="hero-stat-label">Weekly Impressions</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">200M</div>
+          <div class="hero-stat-label">Network Reach</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-video-card fade-up" style="transition-delay:.15s">
+      <div class="hero-video-wrap">
+        <iframe src="https://www.youtube.com/embed/Ps7Vw_1Wy-w?si=z114Zmrfp_RhMmjH&rel=0&modestbranding=1" title="Non-Profit Media Solutions" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="hero-video-caption">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span>Watch: Our Mission &amp; Story</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / WHAT WE DO -->
+<section class="section" id="about" style="background:#fff">
+  <div class="container">
+    <div class="center fade-up">
+      <span class="section-eyebrow">What We Do</span>
+      <h2 class="section-title">A Network Built for Good</h2>
+      <p class="section-subtitle">Non-Profit TV features non-profit messages as the main event &mdash; not an afterthought. We connect sponsors, venues, and communities in one powerful platform.</p>
+    </div>
+    <div class="what-grid">
+      <div class="what-card fade-up">
+        <div class="what-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3>Non-Profit TV Network</h3>
+        <p>A dedicated 24/7 public space TV network committed to serving non-profits. We offer a guaranteed audience that continues to grow year over year, creating unique connections to viewers everywhere.</p>
+      </div>
+      <div class="what-card fade-up" style="transition-delay:.1s">
+        <div class="what-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Distribution Partners</h3>
+        <p>Media partners second to none &mdash; iDreamCTV, Ezway Networks, On the Marc TV, and Inspire World. Together we deliver 200 Million reach with A-List support across public venues nationwide.</p>
+      </div>
+      <div class="what-card fade-up" style="transition-delay:.2s">
+        <div class="what-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Community Connection</h3>
+        <p>Non-Profit TV is committed to giving worthy causes a big stage. We make a real difference every day by connecting organizations with the communities they serve &mdash; fundraisers, live events, PSAs and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NETWORK / DISTRIBUTION -->
+<section class="section network-section" id="network">
+  <div class="container">
+    <div class="network-inner">
+      <div class="network-text fade-up">
+        <span class="section-eyebrow">Our Network</span>
+        <h2 class="section-title">A-List Distribution. Real Reach.</h2>
+        <p class="section-subtitle">Our venue-based TV network delivers your message to high-traffic public locations 24 hours a day. Anchor locations like Denny's restaurants give you maximum visibility with multiple screens per location.</p>
+        <div class="network-stats">
+          <div class="net-stat"><div class="net-stat-num">350K</div><div class="net-stat-label">Weekly Viewers</div></div>
+          <div class="net-stat"><div class="net-stat-num">2M+</div><div class="net-stat-label">Weekly Impressions</div></div>
+          <div class="net-stat"><div class="net-stat-num">200M</div><div class="net-stat-label">Network Reach</div></div>
+          <div class="net-stat"><div class="net-stat-num">24/7</div><div class="net-stat-label">Always On Air</div></div>
+        </div>
+        <div style="margin-top:32px"><a href="#join" class="btn-white">Add Your Venue</a></div>
+      </div>
+      <div class="fade-up" style="transition-delay:.15s">
+        <div class="network-partners">
+          <div class="partner-card">
+            <div class="partner-card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <div><div class="partner-card-name">iDreamCTV</div><div class="partner-card-desc">Connected TV Platform</div></div>
+          </div>
+          <div class="partner-card">
+            <div class="partner-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+            <div><div class="partner-card-name">Ezway Networks</div><div class="partner-card-desc">Venue Distribution</div></div>
+          </div>
+          <div class="partner-card">
+            <div class="partner-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+            <div><div class="partner-card-name">On the Marc TV</div><div class="partner-card-desc">Live Event Coverage</div></div>
+          </div>
+          <div class="partner-card">
+            <div class="partner-card-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><div class="partner-card-name">Inspire World</div><div class="partner-card-desc">Global Content Network</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PSA / NON-PROFITS -->
+<section class="section psa-section" id="psa">
+  <div class="container">
+    <div class="psa-grid">
+      <div class="psa-video-wrap fade-up">
+        <div class="psa-video-inner">
+          <iframe src="https://www.youtube.com/embed/Ps7Vw_1Wy-w?si=z114Zmrfp_RhMmjH&rel=0&modestbranding=1" title="Non-Profit Media Solutions PSA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="fade-up" style="transition-delay:.15s">
+        <span class="section-eyebrow">PSA / Non-Profits</span>
+        <h2 class="section-title">We're Here For You</h2>
+        <p class="section-subtitle">Contact us to learn how we can help with your effort &mdash; fundraisers, live events, PSAs and more. Non-Profit TV is committed to giving worthy causes a big stage.</p>
+        <div class="psa-features">
+          <div class="psa-feature">
+            <div class="psa-feature-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.49 12 19.79 19.79 0 0 1 1.42 3.38 2 2 0 0 1 3.4 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg></div>
+            <div><div class="psa-feature-title">Fundraiser Support</div><div class="psa-feature-desc">Amplify your fundraising campaigns with targeted TV exposure to our engaged audience network.</div></div>
+          </div>
+          <div class="psa-feature">
+            <div class="psa-feature-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+            <div><div class="psa-feature-title">Live Events Coverage</div><div class="psa-feature-desc">Get your live events in front of 350,000+ weekly viewers through our public space TV network.</div></div>
+          </div>
+          <div class="psa-feature">
+            <div class="psa-feature-icon"><svg viewBox="0 0 24 24"><path d="M1 6l11 6 11-6"/><path d="M1 12l11 6 11-6"/></svg></div>
+            <div><div class="psa-feature-title">PSA Broadcasting</div><div class="psa-feature-desc">Run public service announcements as the main event &mdash; not an afterthought &mdash; across our entire network.</div></div>
+          </div>
+        </div>
+        <div style="margin-top:32px"><a href="#contact" class="btn-blue">Contact Us Today</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVERTISERS -->
+<section class="section" id="advertisers" style="background:#fff">
+  <div class="container">
+    <div class="center fade-up">
+      <span class="section-eyebrow">Sponsors &amp; Advertisers</span>
+      <h2 class="section-title">Reach a Captive Audience</h2>
+      <p class="section-subtitle">High-traffic anchor locations including Denny's restaurants deliver your message to venues 24 hours a day. Anchor locations have multiple screens for added visibility.</p>
+    </div>
+    <div class="ad-cards">
+      <div class="ad-card fade-up">
+        <div class="ad-card-num">350,000</div>
+        <div class="ad-card-label">Weekly Viewers</div>
+        <p class="ad-card-desc">A guaranteed, growing audience of engaged viewers in public dining and retail venues every week.</p>
+      </div>
+      <div class="ad-card fade-up" style="transition-delay:.1s">
+        <div class="ad-card-num">2,000,000</div>
+        <div class="ad-card-label">Weekly Impressions</div>
+        <p class="ad-card-desc">Multiple screens per anchor location means your message gets seen again and again throughout the day.</p>
+      </div>
+      <div class="ad-card fade-up" style="transition-delay:.2s">
+        <div class="ad-card-num">24/7</div>
+        <div class="ad-card-label">Continuous Broadcast</div>
+        <p class="ad-card-desc">Your brand runs continuously on our network, giving you round-the-clock exposure in premium public venues.</p>
+      </div>
+    </div>
+    <div class="center" style="margin-top:40px">
+      <a href="#contact" class="btn-blue">Become a Sponsor</a>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN NETWORK -->
+<section class="section join-section" id="join">
+  <div class="container">
+    <div class="join-inner">
+      <div class="join-text fade-up">
+        <span class="section-eyebrow">Join Our Network</span>
+        <h2 class="section-title">Add Your Venue</h2>
+        <p class="section-subtitle">Add your venue to the Non-Profit TV network. Fully automated systems, branding kits, and guidance to increase sales and create meaningful connections to your community.</p>
+        <div class="join-checklist">
+          <div class="join-check"><div class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="join-check-text">Fully automated broadcasting systems &mdash; no manual work required</div></div>
+          <div class="join-check"><div class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="join-check-text">Complete branding kits and co-marketing materials provided</div></div>
+          <div class="join-check"><div class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="join-check-text">Expert guidance to increase sales and community engagement</div></div>
+          <div class="join-check"><div class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="join-check-text">Meaningful connections to your local community and non-profits</div></div>
+          <div class="join-check"><div class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="join-check-text">Access to our 200 million reach network of distribution partners</div></div>
+        </div>
+      </div>
+      <div class="fade-up" style="transition-delay:.15s">
+        <div class="join-form-card">
+          <h3>Get Started Today</h3>
+          <p>Tell us about your venue and we'll reach out within 24 hours.</p>
+          <div class="form-row">
+            <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+          </div>
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@yourvenue.com"></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(555) 000-0000"></div>
+          <div class="form-group"><label>Venue / Organization Name</label><input type="text" placeholder="Your venue name"></div>
+          <div class="form-group"><label>Type</label><select><option>Select your type...</option><option>Restaurant / Dining Venue</option><option>Retail Location</option><option>Non-Profit Organization</option><option>Corporate Advertiser / Sponsor</option><option>Other</option></select></div>
+          <div class="form-group"><label>Message</label><textarea placeholder="Tell us about your venue or how we can help..."></textarea></div>
+          <button class="btn-blue" style="width:100%;justify-content:center;font-size:0.9rem;padding:15px" onclick="alert('Thank you! We will be in touch within 24 hours.')">Send Message &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="fade-up">
+        <span class="section-eyebrow">Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Whether you're a non-profit, a sponsor, or a venue owner &mdash; we'd love to hear from you. Our team is ready to help you get on air.</p>
+        <div class="contact-info" style="margin-top:36px">
+          <div class="contact-block">
+            <div class="contact-block-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="contact-block-label">Email</div><div class="contact-block-val">info@nonprofitmediasolutions.org</div></div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-block-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div><div class="contact-block-label">Website</div><div class="contact-block-val">nonprofitmediasolutions.org</div></div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-block-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <div><div class="contact-block-label">Network</div><div class="contact-block-val">24/7 Live Broadcast</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-up" style="transition-delay:.15s">
+        <div class="join-form-card" style="box-shadow:0 8px 32px rgba(13,61,110,0.10);border:1px solid var(--border)">
+          <h3>Send Us a Message</h3>
+          <p>We'll respond within 1 business day.</p>
+          <div class="form-row">
+            <div class="form-group"><label>First Name</label><input type="text" placeholder="First name"></div>
+            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Last name"></div>
+          </div>
+          <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+          <div class="form-group"><label>Subject</label><select><option>I'm a Non-Profit</option><option>I want to Advertise / Sponsor</option><option>I want to Add My Venue</option><option>General Inquiry</option></select></div>
+          <div class="form-group"><label>Message</label><textarea placeholder="How can we help?" style="min-height:100px"></textarea></div>
+          <button class="btn-blue" style="width:100%;justify-content:center;font-size:0.9rem;padding:15px" onclick="alert('Message sent! We will respond within 1 business day.')">Send Message &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Non-Profit Media Solutions</div>
+      <p class="footer-tagline">America's dedicated 24/7 public space TV network connecting worthy causes to real audiences &mdash; giving good a big stage.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.youtube.com/@nonprofitmediasolutions" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Organization</div>
+      <ul><li><a href="#about">About Us</a></li><li><a href="#network">Our Network</a></li><li><a href="#psa">PSA / Non-Profits</a></li><li><a href="#contact">Contact</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Partners</div>
+      <ul><li><a href="#advertisers">Advertisers</a></li><li><a href="#join">Venue Owners</a></li><li><a href="#join">Join Network</a></li><li><a href="#network">Distribution</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Network</div>
+      <ul><li><a href="#">iDreamCTV</a></li><li><a href="#">Ezway Networks</a></li><li><a href="#">On the Marc TV</a></li><li><a href="#">Inspire World</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Non-Profit Media Solutions. All rights reserved.</p>
+    <p>Giving Good a Big Stage</p>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); });
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} }); }, {threshold:0.12});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => { let cur=''; sections.forEach(s=>{if(window.scrollY>=s.offsetTop-100)cur=s.id;}); navLinks.forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+cur);}); });
+</script>
+</body>
 </html>
